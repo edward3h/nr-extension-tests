@@ -700,5 +700,494 @@
     ],
     "expect": null,
     "note": "select 0..4 of C1-C4 and record when PASS shows"
+  },
+  {
+    "id": "F01a",
+    "title": "exponent 3 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 3
+      }
+    ],
+    "expect": null,
+    "note": "first run: exponent 2 on 5 gave 10"
+  },
+  {
+    "id": "F01b",
+    "title": "exponent 2 on 4",
+    "base": {
+      "Num": "4"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F01c",
+    "title": "exponent 1 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F01d",
+    "title": "exponent 0 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 0
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F02a",
+    "title": "triangular 4 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 4
+      }
+    ],
+    "expect": null,
+    "note": "first run: triangular 3 on 5 gave 8"
+  },
+  {
+    "id": "F02b",
+    "title": "triangular 3 on 10",
+    "base": {
+      "Num": "10"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 3
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F02c",
+    "title": "triangular 1 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F02d",
+    "title": "triangular 0 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 0
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F02e",
+    "title": "triangular 2 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F03a",
+    "title": "power 3 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "power",
+        "value": 3
+      }
+    ],
+    "expect": null,
+    "note": "first run: power 2 on 5 gave 25"
+  },
+  {
+    "id": "F03b",
+    "title": "power 2 on 4",
+    "base": {
+      "Num": "4"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "power",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F03c",
+    "title": "power 0 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "power",
+        "value": 0
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F04a",
+    "title": "increment 10, position 1 on D6+1+2",
+    "base": {
+      "A": "D6+1+2"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 10,
+        "position": 1
+      }
+    ],
+    "expect": null,
+    "note": "numbers are 6, 1, 2"
+  },
+  {
+    "id": "F04b",
+    "title": "increment 10, position 2 on D6+1+2",
+    "base": {
+      "A": "D6+1+2"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 10,
+        "position": 2
+      }
+    ],
+    "expect": null,
+    "note": "numbers are 6, 1, 2"
+  },
+  {
+    "id": "F04c",
+    "title": "increment 10, position 3 on D6+1+2",
+    "base": {
+      "A": "D6+1+2"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 10,
+        "position": 3
+      }
+    ],
+    "expect": null,
+    "note": "numbers are 6, 1, 2"
+  },
+  {
+    "id": "F04d",
+    "title": "increment 10, position -3 on D6+1+2",
+    "base": {
+      "A": "D6+1+2"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 10,
+        "position": -3
+      }
+    ],
+    "expect": null,
+    "note": "numbers are 6, 1, 2"
+  },
+  {
+    "id": "F04e",
+    "title": "increment 10, position -4 on D6+1+2",
+    "base": {
+      "A": "D6+1+2"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 10,
+        "position": -4
+      }
+    ],
+    "expect": null,
+    "note": "numbers are 6, 1, 2"
+  },
+  {
+    "id": "F04f",
+    "title": "increment 2, position 1 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": 1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F05a",
+    "title": "ceil 4 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "ceil",
+        "value": 4
+      }
+    ],
+    "expect": null,
+    "note": "does a clamp touch every number?"
+  },
+  {
+    "id": "F05b",
+    "title": "floor 3 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "floor",
+        "value": 3
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F05c",
+    "title": "ceil 4, position -1 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "ceil",
+        "value": 4,
+        "position": -1
+      }
+    ],
+    "expect": null,
+    "note": "does position apply to clamps?"
+  },
+  {
+    "id": "F06a",
+    "title": "increment 1 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "increment",
+        "value": 1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F06b",
+    "title": "decrement 1 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "decrement",
+        "value": 1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F06c",
+    "title": "decrement 5 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "decrement",
+        "value": 5
+      }
+    ],
+    "expect": null,
+    "note": "goes below 1"
+  },
+  {
+    "id": "F07a",
+    "title": "divide 2, position -1 on D6+4",
+    "base": {
+      "A": "D6+4"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "divide",
+        "value": 2,
+        "position": -1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F07b",
+    "title": "divide 2, no position on D6+4",
+    "base": {
+      "A": "D6+4"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "divide",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F07c",
+    "title": "multiply 2, position -1 on D6+4",
+    "base": {
+      "A": "D6+4"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "multiply",
+        "value": 2,
+        "position": -1
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F08a",
+    "title": "increment 0.5 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 0.5
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F08b",
+    "title": "increment 2 on empty",
+    "base": {
+      "Num": ""
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": "empty numeric field"
+  },
+  {
+    "id": "F08c",
+    "title": "increment 2 on text",
+    "base": {
+      "Txt": "abc"
+    },
+    "modifiers": [
+      {
+        "field": "7e9c-6ea9-9082-981e",
+        "type": "increment",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": "no number in the string"
   }
 ]

@@ -133,3 +133,42 @@ select **AFF-ONE**.
 Not covered: `before`, `localConditionGroups`, `associations` and the
 `cumulative-*` types. These need more elaborate data; the spec lists them as
 open questions.
+
+
+## Follow-up tests (F01 to F08)
+
+Added after the first run (see `RESULTS.md`). Same method: the modifiers apply
+when `APPLY` is selected. Predictions are not given; record what NR shows.
+
+| ID | Test | Base | Modifiers | Note | Observed |
+|---|---|---|---|---|---|
+| F01a | exponent 3 on 5 | `5` | exponent Num 3 | first run: exponent 2 on 5 gave 10 | |
+| F01b | exponent 2 on 4 | `4` | exponent Num 2 |  | |
+| F01c | exponent 1 on 5 | `5` | exponent Num 1 |  | |
+| F01d | exponent 0 on 5 | `5` | exponent Num 0 |  | |
+| F02a | triangular 4 on 5 | `5` | triangular Num 4 | first run: triangular 3 on 5 gave 8 | |
+| F02b | triangular 3 on 10 | `10` | triangular Num 3 |  | |
+| F02c | triangular 1 on 5 | `5` | triangular Num 1 |  | |
+| F02d | triangular 0 on 5 | `5` | triangular Num 0 |  | |
+| F02e | triangular 2 on 5 | `5` | triangular Num 2 |  | |
+| F03a | power 3 on 5 | `5` | power Num 3 | first run: power 2 on 5 gave 25 | |
+| F03b | power 2 on 4 | `4` | power Num 2 |  | |
+| F03c | power 0 on 5 | `5` | power Num 0 |  | |
+| F04a | increment 10, position 1 on D6+1+2 | `D6+1+2` | increment A 10 (position=1) | numbers are 6, 1, 2 | |
+| F04b | increment 10, position 2 on D6+1+2 | `D6+1+2` | increment A 10 (position=2) | numbers are 6, 1, 2 | |
+| F04c | increment 10, position 3 on D6+1+2 | `D6+1+2` | increment A 10 (position=3) | numbers are 6, 1, 2 | |
+| F04d | increment 10, position -3 on D6+1+2 | `D6+1+2` | increment A 10 (position=-3) | numbers are 6, 1, 2 | |
+| F04e | increment 10, position -4 on D6+1+2 | `D6+1+2` | increment A 10 (position=-4) | numbers are 6, 1, 2 | |
+| F04f | increment 2, position 1 on D6+1 | `D6+1` | increment A 2 (position=1) |  | |
+| F05a | ceil 4 on D6+1 | `D6+1` | ceil A 4 | does a clamp touch every number? | |
+| F05b | floor 3 on D6+1 | `D6+1` | floor A 3 |  | |
+| F05c | ceil 4, position -1 on D6+1 | `D6+1` | ceil A 4 (position=-1) | does position apply to clamps? | |
+| F06a | increment 1 on 3+ | `3+` | increment WS 1 |  | |
+| F06b | decrement 1 on 3+ | `3+` | decrement WS 1 |  | |
+| F06c | decrement 5 on 3+ | `3+` | decrement WS 5 | goes below 1 | |
+| F07a | divide 2, position -1 on D6+4 | `D6+4` | divide A 2 (position=-1) |  | |
+| F07b | divide 2, no position on D6+4 | `D6+4` | divide A 2 |  | |
+| F07c | multiply 2, position -1 on D6+4 | `D6+4` | multiply A 2 (position=-1) |  | |
+| F08a | increment 0.5 on 5 | `5` | increment Num 0.5 |  | |
+| F08b | increment 2 on empty | `` | increment Num 2 | empty numeric field | |
+| F08c | increment 2 on text | `abc` | increment Txt 2 | no number in the string | |

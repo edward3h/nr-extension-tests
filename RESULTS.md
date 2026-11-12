@@ -1,7 +1,7 @@
 # Results: first run on New Recruit
 
 Run on 2026-11-12 at newrecruit.eu, with this repository added as "Latest
-changes" (commit `f88ad2b`). Values were read from the page's DOM after
+changes" (commit `5635abb`). Values were read from the page's DOM after
 selecting UNIT A and then the `APPLY` upgrade. Of 37 single-value tests, 28 matched the prediction, 2 differed and 7 had no prediction.
 
 | ID | Test | Base | Expected | Observed | Result |
