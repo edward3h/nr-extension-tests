@@ -19,6 +19,11 @@
         "name": "pts",
         "id": "a2d8-5d18-80b9-4be2",
         "defaultCostLimit": -1
+      },
+      {
+        "name": "Enh",
+        "id": "631d-9d9e-0e1a-0072",
+        "defaultCostLimit": -1
       }
     ],
     "forceEntries": [

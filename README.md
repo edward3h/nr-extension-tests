@@ -224,3 +224,59 @@ Read each value with one model selected (k = r: 1, 2, 3) and with two (k = 2r:
 | F10-pow-v3-r2 | `5` | cumulative-power 3 | models x 2 | |
 | F10-pow-v3-r3 | `5` | cumulative-power 3 | models x 3 | |
 | F10-pow-v2-r1-n10 | `10` | cumulative-power 2 | models x 1 | |
+
+
+## Second follow-up (F11 to F14)
+
+**F11, F12:** profiles on UNIT A, switched on by `APPLY`, with no predictions.
+F12 modifiers repeat once per selected model times `r`, so k = models x r; read
+them with one model and with two.
+
+| ID | Test | Base | Modifier | Note | Observed |
+|---|---|---|---|---|---|
+| F11a-multiply | multiply 2 on D6+1 | `D6+1` | multiply A 2 |  | |
+| F11a-exponent | exponent 2 on D6+1 | `D6+1` | exponent A 2 |  | |
+| F11a-power | power 2 on D6+1 | `D6+1` | power A 2 |  | |
+| F11a-triangular | triangular 2 on D6+1 | `D6+1` | triangular A 2 |  | |
+| F11b-multiply | multiply 2 on 3+ | `3+` | multiply WS 2 |  | |
+| F11b-exponent | exponent 2 on 3+ | `3+` | exponent WS 2 |  | |
+| F11b-power | power 2 on 3+ | `3+` | power WS 2 |  | |
+| F11b-triangular | triangular 2 on 3+ | `3+` | triangular WS 2 |  | |
+| F11a-modulo | modulo 2 on D6+5 | `D6+5` | modulo A 2 |  | |
+| F12-add-r5 | cumulative-add 2, base 5, r=5 | `5` | cumulative-add Num 2 (repeat r=5, value=1, roundUp=False) | k = models x 5 | |
+| F12-mul-r5 | cumulative-multiply 2, base 5, r=5 | `5` | cumulative-multiply Num 2 (repeat r=5, value=1, roundUp=False) | k = models x 5 | |
+| F12-pow-r5 | cumulative-power 2, base 5, r=5 | `5` | cumulative-power Num 2 (repeat r=5, value=1, roundUp=False) | k = models x 5 | |
+| F12-add-neg | cumulative-add 2, base -3, r=2 | `-3` | cumulative-add Num 2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-mul-neg | cumulative-multiply 2, base -3, r=2 | `-3` | cumulative-multiply Num 2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-pow-neg | cumulative-power 2, base -3, r=2 | `-3` | cumulative-power Num 2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-add-frac | cumulative-add 3, base 2.5, r=2 | `2.5` | cumulative-add Num 3 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-mul-frac | cumulative-multiply 3, base 2.5, r=2 | `2.5` | cumulative-multiply Num 3 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-pow-frac | cumulative-power 3, base 2.5, r=2 | `2.5` | cumulative-power Num 3 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-add-vhalf | cumulative-add 0.5, base 5, r=2 | `5` | cumulative-add Num 0.5 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-mul-vhalf | cumulative-multiply 0.5, base 5, r=2 | `5` | cumulative-multiply Num 0.5 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-pow-vhalf | cumulative-power 0.5, base 5, r=2 | `5` | cumulative-power Num 0.5 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-add-vneg | cumulative-add -2, base 5, r=2 | `5` | cumulative-add Num -2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-mul-vneg | cumulative-multiply -2, base 5, r=2 | `5` | cumulative-multiply Num -2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-pow-vneg | cumulative-power -2, base 5, r=2 | `5` | cumulative-power Num -2 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-add-v1 | cumulative-add 1, base 5, r=3 | `5` | cumulative-add Num 1 (repeat r=3, value=1, roundUp=False) | k = models x 3 | |
+| F12-mul-v1 | cumulative-multiply 1, base 5, r=3 | `5` | cumulative-multiply Num 1 (repeat r=3, value=1, roundUp=False) | k = models x 3 | |
+| F12-pow-v1 | cumulative-power 1, base 5, r=3 | `5` | cumulative-power Num 1 (repeat r=3, value=1, roundUp=False) | k = models x 3 | |
+| F12-add-v0 | cumulative-add 0, base 5, r=2 | `5` | cumulative-add Num 0 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-mul-v0 | cumulative-multiply 0, base 5, r=2 | `5` | cumulative-multiply Num 0 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-pow-v0 | cumulative-power 0, base 5, r=2 | `5` | cumulative-power Num 0 (repeat r=2, value=1, roundUp=False) | k = models x 2 | |
+| F12-ru-floor | increment 2, repeat value 2 (floor) | `5` | increment Num 2 (repeat r=1, value=2, roundUp=False) | one model: 0 repetitions, two: 1 | |
+| F12-ru-ceil | increment 2, repeat value 2, roundUp | `5` | increment Num 2 (repeat r=1, value=2, roundUp=True) | one model: 1 repetition, two: 1 | |
+| F12-ru-v2r3 | increment 2, repeat value 2 repeats 3 | `5` | increment Num 2 (repeat r=3, value=2, roundUp=False) | floor(count/2)*3 | |
+
+**F13 `before`:** Model One's and Model Two's weapons carry conditional
+`append` modifiers on `Keywords` using the `before` condition (counted node =
+the other model, scope `parent`). Add both models and read their `Keywords`.
+Names show which condition fired: `M2:M1-before` means "Model One is before
+me".
+
+**F14 units** (add each from the list; add several copies):
+
+- **G1** costs 100 pts, +10 pts when a local condition group finds 2 or more earlier copies (`before` + `instanceOf` itself, scope parent). Add four copies and read each cost.
+- **G2** costs 100 pts, +10 pts when 2 or more copies exist (no `before`). Add three copies.
+- **G3** costs 100 pts, +5 pts when fewer than 2 copies exist (`lessThan`). Add two copies.
+- **E (leader)** can attach to **F (bodyguard)** through an `associations` entry (label "Leader", scope force, only F allowed). **G4** is a unit E must not be able to attach to. E carries a modifier that appends `FROM-E` to the weapons of its attached group. E and F each have an enhancement upgrade costing 1 `Enh`; a constraint with `traverseAssociationGroup` limits the group to 1 `Enh`. Add E, F and G4, find how NR attaches a leader, attach E to F, and compare weapon keywords and validation messages with E detached.

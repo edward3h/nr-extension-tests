@@ -1893,5 +1893,773 @@
       "two models": "15",
       "no models": "unchanged"
     }
+  },
+  {
+    "id": "F11a-multiply",
+    "title": "multiply 2 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "multiply",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11a-exponent",
+    "title": "exponent 2 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "exponent",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11a-power",
+    "title": "power 2 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "power",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11a-triangular",
+    "title": "triangular 2 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "triangular",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11b-multiply",
+    "title": "multiply 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "multiply",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11b-exponent",
+    "title": "exponent 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "exponent",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11b-power",
+    "title": "power 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "power",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11b-triangular",
+    "title": "triangular 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "triangular",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F11a-modulo",
+    "title": "modulo 2 on D6+5",
+    "base": {
+      "A": "D6+5"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "modulo",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F12-add-r5",
+    "title": "cumulative-add 2, base 5, r=5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 5,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 5"
+  },
+  {
+    "id": "F12-mul-r5",
+    "title": "cumulative-multiply 2, base 5, r=5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 5,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 5"
+  },
+  {
+    "id": "F12-pow-r5",
+    "title": "cumulative-power 2, base 5, r=5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 5,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 5"
+  },
+  {
+    "id": "F12-add-neg",
+    "title": "cumulative-add 2, base -3, r=2",
+    "base": {
+      "Num": "-3"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-mul-neg",
+    "title": "cumulative-multiply 2, base -3, r=2",
+    "base": {
+      "Num": "-3"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-pow-neg",
+    "title": "cumulative-power 2, base -3, r=2",
+    "base": {
+      "Num": "-3"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-add-frac",
+    "title": "cumulative-add 3, base 2.5, r=2",
+    "base": {
+      "Num": "2.5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 3,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-mul-frac",
+    "title": "cumulative-multiply 3, base 2.5, r=2",
+    "base": {
+      "Num": "2.5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 3,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-pow-frac",
+    "title": "cumulative-power 3, base 2.5, r=2",
+    "base": {
+      "Num": "2.5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 3,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-add-vhalf",
+    "title": "cumulative-add 0.5, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 0.5,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-mul-vhalf",
+    "title": "cumulative-multiply 0.5, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 0.5,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-pow-vhalf",
+    "title": "cumulative-power 0.5, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 0.5,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-add-vneg",
+    "title": "cumulative-add -2, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": -2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-mul-vneg",
+    "title": "cumulative-multiply -2, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": -2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-pow-vneg",
+    "title": "cumulative-power -2, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": -2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-add-v1",
+    "title": "cumulative-add 1, base 5, r=3",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 1,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 3,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 3"
+  },
+  {
+    "id": "F12-mul-v1",
+    "title": "cumulative-multiply 1, base 5, r=3",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 1,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 3,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 3"
+  },
+  {
+    "id": "F12-pow-v1",
+    "title": "cumulative-power 1, base 5, r=3",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 1,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 3,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 3"
+  },
+  {
+    "id": "F12-add-v0",
+    "title": "cumulative-add 0, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 0,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-mul-v0",
+    "title": "cumulative-multiply 0, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 0,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-pow-v0",
+    "title": "cumulative-power 0, base 5, r=2",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 0,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 2,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 1
+        }
+      }
+    ],
+    "expect": null,
+    "note": "k = models x 2"
+  },
+  {
+    "id": "F12-ru-floor",
+    "title": "increment 2, repeat value 2 (floor)",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 1,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 2
+        }
+      }
+    ],
+    "expect": null,
+    "note": "one model: 0 repetitions, two: 1"
+  },
+  {
+    "id": "F12-ru-ceil",
+    "title": "increment 2, repeat value 2, roundUp",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 1,
+          "roundUp": true,
+          "scope": "self",
+          "shared": true,
+          "value": 2
+        }
+      }
+    ],
+    "expect": null,
+    "note": "one model: 1 repetition, two: 1"
+  },
+  {
+    "id": "F12-ru-v2r3",
+    "title": "increment 2, repeat value 2 repeats 3",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 2,
+        "repeats": {
+          "childId": "model",
+          "field": "selections",
+          "includeChildSelections": true,
+          "repeats": 3,
+          "roundUp": false,
+          "scope": "self",
+          "shared": true,
+          "value": 2
+        }
+      }
+    ],
+    "expect": null,
+    "note": "floor(count/2)*3"
   }
 ]
