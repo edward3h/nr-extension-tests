@@ -1,0 +1,704 @@
+[
+  {
+    "id": "T01a",
+    "title": "position 0 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": 0
+      }
+    ],
+    "expect": "D8+1",
+    "note": "first number"
+  },
+  {
+    "id": "T01b",
+    "title": "position -1 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -1
+      }
+    ],
+    "expect": "D6+3",
+    "note": "last number"
+  },
+  {
+    "id": "T01c",
+    "title": "position unset on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2
+      }
+    ],
+    "expect": "D8+1",
+    "note": "default position (assumed first number)"
+  },
+  {
+    "id": "T02",
+    "title": "position -2 on D6+1",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -2
+      }
+    ],
+    "expect": "D8+1",
+    "note": "second from last = first of two"
+  },
+  {
+    "id": "T03a",
+    "title": "two arithmetic mods, same number",
+    "base": {
+      "A": "D6+1"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -1
+      },
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "decrement",
+        "value": 1,
+        "position": -1
+      }
+    ],
+    "expect": "D6+2",
+    "note": ""
+  },
+  {
+    "id": "T03b",
+    "title": "position -1 on a plain number",
+    "base": {
+      "A": "3"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -1
+      }
+    ],
+    "expect": "5",
+    "note": ""
+  },
+  {
+    "id": "T04a",
+    "title": "order: replace listed first",
+    "base": {
+      "Keywords": "Assault"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "Pistol",
+        "arg": "Assault"
+      },
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "Heavy",
+        "join": ", "
+      }
+    ],
+    "expect": "Pistol, Heavy",
+    "note": "type order: append then replace"
+  },
+  {
+    "id": "T04b",
+    "title": "order: append listed first",
+    "base": {
+      "Keywords": "Assault"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "Heavy",
+        "join": ", "
+      },
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "Pistol",
+        "arg": "Assault"
+      }
+    ],
+    "expect": "Pistol, Heavy",
+    "note": "must equal T04a"
+  },
+  {
+    "id": "T05",
+    "title": "replace basic",
+    "base": {
+      "Keywords": "Assault, Heavy"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "Pistol",
+        "arg": "Heavy"
+      }
+    ],
+    "expect": "Assault, Pistol",
+    "note": ""
+  },
+  {
+    "id": "T06",
+    "title": "replace: literal or pattern?",
+    "base": {
+      "Keywords": "Heavy"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "X",
+        "arg": "e."
+      }
+    ],
+    "expect": "Heavy",
+    "note": "unchanged if literal; \"HXvy\" if the arg is a pattern"
+  },
+  {
+    "id": "T07",
+    "title": "replace: first or all matches?",
+    "base": {
+      "Keywords": "Heavy, Heavy"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "Light",
+        "arg": "Heavy"
+      }
+    ],
+    "expect": null,
+    "note": "record: \"Light, Light\" (all) or \"Light, Heavy\" (first)"
+  },
+  {
+    "id": "T08a",
+    "title": "replace, empty arg, empty field",
+    "base": {
+      "Txt": ""
+    },
+    "modifiers": [
+      {
+        "field": "7e9c-6ea9-9082-981e",
+        "type": "replace",
+        "value": "5+",
+        "arg": ""
+      }
+    ],
+    "expect": "5+",
+    "note": ""
+  },
+  {
+    "id": "T08b",
+    "title": "replace, empty arg, non-empty field",
+    "base": {
+      "Txt": "6+"
+    },
+    "modifiers": [
+      {
+        "field": "7e9c-6ea9-9082-981e",
+        "type": "replace",
+        "value": "5+",
+        "arg": ""
+      }
+    ],
+    "expect": "6+",
+    "note": "unchanged"
+  },
+  {
+    "id": "T08c",
+    "title": "replace with no value (delete)",
+    "base": {
+      "Txt": "D6+0"
+    },
+    "modifiers": [
+      {
+        "field": "7e9c-6ea9-9082-981e",
+        "type": "replace",
+        "arg": "+0"
+      }
+    ],
+    "expect": "D6",
+    "note": ""
+  },
+  {
+    "id": "T09a",
+    "title": "floor 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "floor",
+        "value": 2
+      }
+    ],
+    "expect": "3+",
+    "note": ""
+  },
+  {
+    "id": "T09b",
+    "title": "floor 4 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "floor",
+        "value": 4
+      }
+    ],
+    "expect": "4+",
+    "note": ""
+  },
+  {
+    "id": "T09c",
+    "title": "ceil 2 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "ceil",
+        "value": 2
+      }
+    ],
+    "expect": "2+",
+    "note": ""
+  },
+  {
+    "id": "T09d",
+    "title": "ceil 4 on 3+",
+    "base": {
+      "WS": "3+"
+    },
+    "modifiers": [
+      {
+        "field": "b755-0ea0-6554-6646",
+        "type": "ceil",
+        "value": 4
+      }
+    ],
+    "expect": "3+",
+    "note": ""
+  },
+  {
+    "id": "T11a",
+    "title": "modulo 3 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "modulo",
+        "value": 3
+      }
+    ],
+    "expect": "2",
+    "note": ""
+  },
+  {
+    "id": "T11b",
+    "title": "power 2 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "power",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": "record (25 if value^... or 32 if 2^5)"
+  },
+  {
+    "id": "T11c",
+    "title": "exponent 2 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": "record; compare with T11b"
+  },
+  {
+    "id": "T11d",
+    "title": "triangular 3 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 3
+      }
+    ],
+    "expect": null,
+    "note": "record"
+  },
+  {
+    "id": "T11e",
+    "title": "divide 2 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "divide",
+        "value": 2
+      }
+    ],
+    "expect": null,
+    "note": "record: 2.5, 2 or 3 (rounding)"
+  },
+  {
+    "id": "T11f",
+    "title": "multiply 3 on 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "multiply",
+        "value": 3
+      }
+    ],
+    "expect": "15",
+    "note": ""
+  },
+  {
+    "id": "T12a",
+    "title": "append with skipIfPresent",
+    "base": {
+      "Keywords": "Ignores Cover"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "Ignores Cover",
+        "join": ", ",
+        "skipIfPresent": "Ignores Cover"
+      }
+    ],
+    "expect": "Ignores Cover",
+    "note": ""
+  },
+  {
+    "id": "T12b",
+    "title": "append without skipIfPresent",
+    "base": {
+      "Keywords": "Ignores Cover"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "Ignores Cover",
+        "join": ", "
+      }
+    ],
+    "expect": "Ignores Cover, Ignores Cover",
+    "note": ""
+  },
+  {
+    "id": "T12c",
+    "title": "skipIfPresent on replace",
+    "base": {
+      "Keywords": "Sustained Hits 1"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "replace",
+        "value": "Sustained Hits 2",
+        "arg": "Sustained Hits 1",
+        "skipIfPresent": "Sustained Hits"
+      }
+    ],
+    "expect": "Sustained Hits 2",
+    "note": "if ignored on replace; unchanged if honoured"
+  },
+  {
+    "id": "T12d",
+    "title": "skipIfPresent on increment",
+    "base": {
+      "A": "3"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "skipIfPresent": "3"
+      }
+    ],
+    "expect": null,
+    "note": "record: 5 if ignored, 3 if honoured"
+  },
+  {
+    "id": "T14a",
+    "title": "append, join unset",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "B"
+      }
+    ],
+    "expect": "A B",
+    "note": ""
+  },
+  {
+    "id": "T14b",
+    "title": "append, join \", \"",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "B",
+        "join": ", "
+      }
+    ],
+    "expect": "A, B",
+    "note": ""
+  },
+  {
+    "id": "T14c",
+    "title": "append, join \"\"",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "B",
+        "join": ""
+      }
+    ],
+    "expect": "AB",
+    "note": ""
+  },
+  {
+    "id": "T14d",
+    "title": "prepend, join \", \"",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "prepend",
+        "value": "B",
+        "join": ", "
+      }
+    ],
+    "expect": "B, A",
+    "note": ""
+  },
+  {
+    "id": "T14e",
+    "title": "append, join newline",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "B",
+        "join": "\n"
+      }
+    ],
+    "expect": null,
+    "note": "record: A then B on a new line?"
+  },
+  {
+    "id": "T15",
+    "title": "position -1 on append (inert?)",
+    "base": {
+      "Keywords": "A"
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "append",
+        "value": "B",
+        "join": ", ",
+        "position": -1
+      }
+    ],
+    "expect": "A, B",
+    "note": "same as T14b if position is ignored"
+  },
+  {
+    "id": "T19a",
+    "title": "dice attacks: append +0, increment last, strip +0",
+    "base": {
+      "A": "D6"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "append",
+        "value": "+0",
+        "join": ""
+      },
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -1
+      },
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "replace",
+        "arg": "+0"
+      }
+    ],
+    "expect": "D6+2",
+    "note": "the real Wulfen Stone pattern"
+  },
+  {
+    "id": "T19b",
+    "title": "dice attacks: increment -1 without the +0 trick",
+    "base": {
+      "A": "D6"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 2,
+        "position": -1
+      }
+    ],
+    "expect": "D8",
+    "note": "shows why the +0 is needed"
+  },
+  {
+    "id": "T19c",
+    "title": "dice attacks, +0 left in place (no strip)",
+    "base": {
+      "A": "D6"
+    },
+    "modifiers": [
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "append",
+        "value": "+0",
+        "join": ""
+      },
+      {
+        "field": "4c71-02b5-b294-444d",
+        "type": "increment",
+        "value": 0,
+        "position": -1
+      }
+    ],
+    "expect": "D6+0",
+    "note": "a zero increment leaves the suffix"
+  },
+  {
+    "id": "T16a",
+    "title": "count min 3",
+    "base": {
+      "Keywords": ""
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "set",
+        "value": "PASS"
+      }
+    ],
+    "expect": null,
+    "note": "select 0..4 of C1-C4 and record when PASS shows"
+  },
+  {
+    "id": "T16b",
+    "title": "count min 3 max 3",
+    "base": {
+      "Keywords": ""
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "set",
+        "value": "PASS"
+      }
+    ],
+    "expect": null,
+    "note": "select 0..4 of C1-C4 and record when PASS shows"
+  },
+  {
+    "id": "T16c",
+    "title": "count max 1",
+    "base": {
+      "Keywords": ""
+    },
+    "modifiers": [
+      {
+        "field": "a2d2-6932-5906-9eaf",
+        "type": "set",
+        "value": "PASS"
+      }
+    ],
+    "expect": null,
+    "note": "select 0..4 of C1-C4 and record when PASS shows"
+  }
+]
