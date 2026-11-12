@@ -1,7 +1,7 @@
 # NR extension tests
 
 A small scratch game system for checking how New Recruit (NR) evaluates the
-format extensions described in `bsdata-extensions-spec.md` (in the author's BSData working folder; not part of this repo).
+format extensions described in [`docs/bsdata-extensions-spec.md`](https://github.com/edward3h/bsdata-engine/blob/main/docs/bsdata-extensions-spec.md) in `edward3h/bsdata-engine`.
 
 Files:
 
