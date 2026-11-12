@@ -171,8 +171,8 @@ k = (models selected) x r. Values are shown at one and at two selected models.
 
 ### Formulas that fit every observation
 
-With base `n`, modifier value `v` and `k` repetitions (all 31 F10 readings and
-the F09 readings match these to within rounding):
+With base `n`, modifier value `v` and `k` repetitions (all 42 F10 readings and
+the 22 F09 readings match these):
 
 | Type | Result |
 |---|---|
