@@ -4248,6 +4248,710 @@
                 ]
               }
             ]
+          },
+          {
+            "name": "F09a",
+            "id": "eec2-7fd8-a831-44d1",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "increment",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09b",
+            "id": "ab27-6782-444a-0eaa",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "multiply",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09c",
+            "id": "8815-de15-cda1-db1b",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "exponent",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09d",
+            "id": "e060-1d50-585e-005c",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "triangular",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09e",
+            "id": "dcf9-71af-bb09-70e5",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "triangular",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09f",
+            "id": "57f6-ff34-284d-c821",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "power",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09g",
+            "id": "7914-5e69-239f-357f",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "cumulative-add",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09h",
+            "id": "98d1-1b37-3495-f909",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "cumulative-multiply",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09i",
+            "id": "36a0-219d-221b-638d",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "cumulative-power",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09j",
+            "id": "06c8-8d34-c033-c0c6",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "decrement",
+                "value": 1,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "F09k",
+            "id": "6e6c-11b1-70c0-daab",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4",
+                "$text": "5"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ],
+            "modifiers": [
+              {
+                "field": "e4ba-e365-6ee4-10a4",
+                "type": "divide",
+                "value": 2,
+                "conditions": [
+                  {
+                    "childId": "7fc7-51ca-0305-dae1",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "scope": "self",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ],
+                "repeats": [
+                  {
+                    "childId": "model",
+                    "field": "selections",
+                    "includeChildSelections": true,
+                    "repeats": 1,
+                    "roundUp": false,
+                    "scope": "self",
+                    "shared": true,
+                    "value": 1
+                  }
+                ]
+              }
+            ]
           }
         ]
       },

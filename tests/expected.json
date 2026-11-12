@@ -1189,5 +1189,192 @@
     ],
     "expect": null,
     "note": "no number in the string"
+  },
+  {
+    "id": "F09a",
+    "title": "increment 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "increment",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "control: 5 + 2k"
+  },
+  {
+    "id": "F09b",
+    "title": "multiply 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "multiply",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "control: 5 * 2^k"
+  },
+  {
+    "id": "F09c",
+    "title": "exponent 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "exponent",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "plain: behaves like multiply"
+  },
+  {
+    "id": "F09d",
+    "title": "triangular 1, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 1,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "plain: behaves like increment"
+  },
+  {
+    "id": "F09e",
+    "title": "triangular 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "triangular",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F09f",
+    "title": "power 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "power",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "plain: n^2"
+  },
+  {
+    "id": "F09g",
+    "title": "cumulative-add 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F09h",
+    "title": "cumulative-multiply 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F09i",
+    "title": "cumulative-power 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": ""
+  },
+  {
+    "id": "F09j",
+    "title": "decrement 1, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "decrement",
+        "value": 1,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": "control: 5 - k"
+  },
+  {
+    "id": "F09k",
+    "title": "divide 2, repeated",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "divide",
+        "value": 2,
+        "repeats": "once per selected model"
+      }
+    ],
+    "expect": null,
+    "note": ""
   }
 ]

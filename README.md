@@ -172,3 +172,24 @@ when `APPLY` is selected. Predictions are not given; record what NR shows.
 | F08a | increment 0.5 on 5 | `5` | increment Num 0.5 |  | |
 | F08b | increment 2 on empty | `` | increment Num 2 | empty numeric field | |
 | F08c | increment 2 on text | `abc` | increment Txt 2 | no number in the string | |
+
+
+## Follow-up tests with repeats (F09)
+
+Each modifier repeats once per selected model, so the number of repetitions k
+is the number of models you have added (0, 1 or 2). Read the values with k = 2,
+then untick Model Two (k = 1), then Model One (k = 0).
+
+| ID | Test | Base | Modifier | Note | Observed |
+|---|---|---|---|---|---|
+| F09a | increment 2, repeated | `5` | increment Num 2 (repeated once per selected model) | control: 5 + 2k | |
+| F09b | multiply 2, repeated | `5` | multiply Num 2 (repeated once per selected model) | control: 5 * 2^k | |
+| F09c | exponent 2, repeated | `5` | exponent Num 2 (repeated once per selected model) | plain: behaves like multiply | |
+| F09d | triangular 1, repeated | `5` | triangular Num 1 (repeated once per selected model) | plain: behaves like increment | |
+| F09e | triangular 2, repeated | `5` | triangular Num 2 (repeated once per selected model) |  | |
+| F09f | power 2, repeated | `5` | power Num 2 (repeated once per selected model) | plain: n^2 | |
+| F09g | cumulative-add 2, repeated | `5` | cumulative-add Num 2 (repeated once per selected model) |  | |
+| F09h | cumulative-multiply 2, repeated | `5` | cumulative-multiply Num 2 (repeated once per selected model) |  | |
+| F09i | cumulative-power 2, repeated | `5` | cumulative-power Num 2 (repeated once per selected model) |  | |
+| F09j | decrement 1, repeated | `5` | decrement Num 1 (repeated once per selected model) | control: 5 - k | |
+| F09k | divide 2, repeated | `5` | divide Num 2 (repeated once per selected model) |  | |
