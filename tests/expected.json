@@ -14,7 +14,7 @@
       }
     ],
     "expect": "D8+3",
-    "note": "observed in NR: position 0 behaves like unset (all numbers)"
+    "note": "observed in NR: position 0 behaves like unset (all numbers) | observed in NR"
   },
   {
     "id": "T01b",
@@ -31,7 +31,7 @@
       }
     ],
     "expect": "D6+3",
-    "note": "last number"
+    "note": "last number | observed in NR"
   },
   {
     "id": "T01c",
@@ -47,7 +47,7 @@
       }
     ],
     "expect": "D8+3",
-    "note": "observed in NR: unset changes every number"
+    "note": "observed in NR: unset changes every number | observed in NR"
   },
   {
     "id": "T02",
@@ -64,7 +64,7 @@
       }
     ],
     "expect": "D8+1",
-    "note": "second from last = first of two"
+    "note": "second from last = first of two | observed in NR"
   },
   {
     "id": "T03a",
@@ -87,7 +87,7 @@
       }
     ],
     "expect": "D6+2",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T03b",
@@ -104,7 +104,7 @@
       }
     ],
     "expect": "5",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T04a",
@@ -127,7 +127,7 @@
       }
     ],
     "expect": "Pistol, Heavy",
-    "note": "type order: append then replace"
+    "note": "type order: append then replace | observed in NR"
   },
   {
     "id": "T04b",
@@ -150,7 +150,7 @@
       }
     ],
     "expect": "Pistol, Heavy",
-    "note": "must equal T04a"
+    "note": "must equal T04a | observed in NR"
   },
   {
     "id": "T05",
@@ -167,7 +167,7 @@
       }
     ],
     "expect": "Assault, Pistol",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T06",
@@ -184,7 +184,7 @@
       }
     ],
     "expect": "Heavy",
-    "note": "unchanged if literal; \"HXvy\" if the arg is a pattern"
+    "note": "unchanged if literal; \"HXvy\" if the arg is a pattern | observed in NR"
   },
   {
     "id": "T07",
@@ -201,7 +201,7 @@
       }
     ],
     "expect": "Light, Light",
-    "note": "observed in NR: all matches replaced"
+    "note": "observed in NR: all matches replaced | observed in NR"
   },
   {
     "id": "T08a",
@@ -218,7 +218,7 @@
       }
     ],
     "expect": "5+",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T08b",
@@ -235,7 +235,7 @@
       }
     ],
     "expect": "6+",
-    "note": "unchanged"
+    "note": "unchanged | observed in NR"
   },
   {
     "id": "T08c",
@@ -251,7 +251,7 @@
       }
     ],
     "expect": "D6",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T09a",
@@ -267,7 +267,7 @@
       }
     ],
     "expect": "3+",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T09b",
@@ -283,7 +283,7 @@
       }
     ],
     "expect": "4+",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T09c",
@@ -299,7 +299,7 @@
       }
     ],
     "expect": "2+",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T09d",
@@ -315,7 +315,7 @@
       }
     ],
     "expect": "3+",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T11a",
@@ -331,7 +331,7 @@
       }
     ],
     "expect": "2",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T11b",
@@ -347,7 +347,7 @@
       }
     ],
     "expect": "25",
-    "note": "observed in NR"
+    "note": "observed in NR | observed in NR"
   },
   {
     "id": "T11c",
@@ -363,7 +363,7 @@
       }
     ],
     "expect": "10",
-    "note": "observed in NR (unexplained)"
+    "note": "observed in NR (unexplained) | observed in NR"
   },
   {
     "id": "T11d",
@@ -379,7 +379,7 @@
       }
     ],
     "expect": "8",
-    "note": "observed in NR (unexplained)"
+    "note": "observed in NR (unexplained) | observed in NR"
   },
   {
     "id": "T11e",
@@ -395,7 +395,7 @@
       }
     ],
     "expect": "2.5",
-    "note": "observed in NR: no rounding"
+    "note": "observed in NR: no rounding | observed in NR"
   },
   {
     "id": "T11f",
@@ -411,7 +411,7 @@
       }
     ],
     "expect": "15",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T12a",
@@ -429,7 +429,7 @@
       }
     ],
     "expect": "Ignores Cover",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T12b",
@@ -446,7 +446,7 @@
       }
     ],
     "expect": "Ignores Cover, Ignores Cover",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T12c",
@@ -464,7 +464,7 @@
       }
     ],
     "expect": "Sustained Hits 2",
-    "note": "if ignored on replace; unchanged if honoured"
+    "note": "if ignored on replace; unchanged if honoured | observed in NR"
   },
   {
     "id": "T12d",
@@ -481,7 +481,7 @@
       }
     ],
     "expect": "5",
-    "note": "observed in NR: skipIfPresent ignored on increment"
+    "note": "observed in NR: skipIfPresent ignored on increment | observed in NR"
   },
   {
     "id": "T14a",
@@ -497,7 +497,7 @@
       }
     ],
     "expect": "A B",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T14b",
@@ -514,7 +514,7 @@
       }
     ],
     "expect": "A, B",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T14c",
@@ -531,7 +531,7 @@
       }
     ],
     "expect": "AB",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T14d",
@@ -548,7 +548,7 @@
       }
     ],
     "expect": "B, A",
-    "note": ""
+    "note": " | observed in NR"
   },
   {
     "id": "T14e",
@@ -565,7 +565,7 @@
       }
     ],
     "expect": "A\nB",
-    "note": "observed in NR"
+    "note": "observed in NR | observed in NR"
   },
   {
     "id": "T15",
@@ -583,7 +583,7 @@
       }
     ],
     "expect": "A, B",
-    "note": "same as T14b if position is ignored"
+    "note": "same as T14b if position is ignored | observed in NR"
   },
   {
     "id": "T19a",
@@ -611,7 +611,7 @@
       }
     ],
     "expect": "D6+2",
-    "note": "the real Wulfen Stone pattern"
+    "note": "the real Wulfen Stone pattern | observed in NR"
   },
   {
     "id": "T19b",
@@ -628,7 +628,7 @@
       }
     ],
     "expect": "D8",
-    "note": "shows why the +0 is needed"
+    "note": "shows why the +0 is needed | observed in NR"
   },
   {
     "id": "T19c",
@@ -651,7 +651,7 @@
       }
     ],
     "expect": "D6+0",
-    "note": "a zero increment leaves the suffix"
+    "note": "a zero increment leaves the suffix | observed in NR"
   },
   {
     "id": "T16a",
@@ -666,8 +666,8 @@
         "value": "PASS"
       }
     ],
-    "expect": null,
-    "note": "select 0..4 of C1-C4 and record when PASS shows"
+    "expect": "PASS",
+    "note": "select 0..4 of C1-C4 and record when PASS shows | observed in NR"
   },
   {
     "id": "T16b",
@@ -682,8 +682,8 @@
         "value": "PASS"
       }
     ],
-    "expect": null,
-    "note": "select 0..4 of C1-C4 and record when PASS shows"
+    "expect": "",
+    "note": "select 0..4 of C1-C4 and record when PASS shows | observed in NR"
   },
   {
     "id": "T16c",
@@ -698,8 +698,8 @@
         "value": "PASS"
       }
     ],
-    "expect": null,
-    "note": "select 0..4 of C1-C4 and record when PASS shows"
+    "expect": "",
+    "note": "select 0..4 of C1-C4 and record when PASS shows | observed in NR"
   },
   {
     "id": "F01a",
@@ -714,8 +714,8 @@
         "value": 3
       }
     ],
-    "expect": null,
-    "note": "first run: exponent 2 on 5 gave 10"
+    "expect": "15",
+    "note": "first run: exponent 2 on 5 gave 10 | observed in NR"
   },
   {
     "id": "F01b",
@@ -730,8 +730,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "8",
+    "note": " | observed in NR"
   },
   {
     "id": "F01c",
@@ -746,8 +746,8 @@
         "value": 1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "5",
+    "note": " | observed in NR"
   },
   {
     "id": "F01d",
@@ -762,8 +762,8 @@
         "value": 0
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "0",
+    "note": " | observed in NR"
   },
   {
     "id": "F02a",
@@ -778,8 +778,8 @@
         "value": 4
       }
     ],
-    "expect": null,
-    "note": "first run: triangular 3 on 5 gave 8"
+    "expect": "9",
+    "note": "first run: triangular 3 on 5 gave 8 | observed in NR"
   },
   {
     "id": "F02b",
@@ -794,8 +794,8 @@
         "value": 3
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "13",
+    "note": " | observed in NR"
   },
   {
     "id": "F02c",
@@ -810,8 +810,8 @@
         "value": 1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "6",
+    "note": " | observed in NR"
   },
   {
     "id": "F02d",
@@ -826,8 +826,8 @@
         "value": 0
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "5",
+    "note": " | observed in NR"
   },
   {
     "id": "F02e",
@@ -842,8 +842,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "7",
+    "note": " | observed in NR"
   },
   {
     "id": "F03a",
@@ -858,8 +858,8 @@
         "value": 3
       }
     ],
-    "expect": null,
-    "note": "first run: power 2 on 5 gave 25"
+    "expect": "125",
+    "note": "first run: power 2 on 5 gave 25 | observed in NR"
   },
   {
     "id": "F03b",
@@ -874,8 +874,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "16",
+    "note": " | observed in NR"
   },
   {
     "id": "F03c",
@@ -890,8 +890,8 @@
         "value": 0
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "1",
+    "note": " | observed in NR"
   },
   {
     "id": "F04a",
@@ -907,8 +907,8 @@
         "position": 1
       }
     ],
-    "expect": null,
-    "note": "numbers are 6, 1, 2"
+    "expect": "D16+1+2",
+    "note": "numbers are 6, 1, 2 | observed in NR"
   },
   {
     "id": "F04b",
@@ -924,8 +924,8 @@
         "position": 2
       }
     ],
-    "expect": null,
-    "note": "numbers are 6, 1, 2"
+    "expect": "D6+11+2",
+    "note": "numbers are 6, 1, 2 | observed in NR"
   },
   {
     "id": "F04c",
@@ -941,8 +941,8 @@
         "position": 3
       }
     ],
-    "expect": null,
-    "note": "numbers are 6, 1, 2"
+    "expect": "D6+1+12",
+    "note": "numbers are 6, 1, 2 | observed in NR"
   },
   {
     "id": "F04d",
@@ -958,8 +958,8 @@
         "position": -3
       }
     ],
-    "expect": null,
-    "note": "numbers are 6, 1, 2"
+    "expect": "D16+1+2",
+    "note": "numbers are 6, 1, 2 | observed in NR"
   },
   {
     "id": "F04e",
@@ -975,8 +975,8 @@
         "position": -4
       }
     ],
-    "expect": null,
-    "note": "numbers are 6, 1, 2"
+    "expect": "D6+1+2",
+    "note": "numbers are 6, 1, 2 | observed in NR"
   },
   {
     "id": "F04f",
@@ -992,8 +992,8 @@
         "position": 1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D8+1",
+    "note": " | observed in NR"
   },
   {
     "id": "F05a",
@@ -1008,8 +1008,8 @@
         "value": 4
       }
     ],
-    "expect": null,
-    "note": "does a clamp touch every number?"
+    "expect": "D4+1",
+    "note": "does a clamp touch every number? | observed in NR"
   },
   {
     "id": "F05b",
@@ -1024,8 +1024,8 @@
         "value": 3
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D6+3",
+    "note": " | observed in NR"
   },
   {
     "id": "F05c",
@@ -1041,8 +1041,8 @@
         "position": -1
       }
     ],
-    "expect": null,
-    "note": "does position apply to clamps?"
+    "expect": "D6+1",
+    "note": "does position apply to clamps? | observed in NR"
   },
   {
     "id": "F06a",
@@ -1057,8 +1057,8 @@
         "value": 1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "4+",
+    "note": " | observed in NR"
   },
   {
     "id": "F06b",
@@ -1073,8 +1073,8 @@
         "value": 1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "2+",
+    "note": " | observed in NR"
   },
   {
     "id": "F06c",
@@ -1089,8 +1089,8 @@
         "value": 5
       }
     ],
-    "expect": null,
-    "note": "goes below 1"
+    "expect": "-2+",
+    "note": "goes below 1 | observed in NR"
   },
   {
     "id": "F07a",
@@ -1106,8 +1106,8 @@
         "position": -1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D6+2",
+    "note": " | observed in NR"
   },
   {
     "id": "F07b",
@@ -1122,8 +1122,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D3+2",
+    "note": " | observed in NR"
   },
   {
     "id": "F07c",
@@ -1139,8 +1139,8 @@
         "position": -1
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D6+8",
+    "note": " | observed in NR"
   },
   {
     "id": "F08a",
@@ -1155,8 +1155,8 @@
         "value": 0.5
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "5.5",
+    "note": " | observed in NR"
   },
   {
     "id": "F08b",
@@ -1171,8 +1171,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": "empty numeric field"
+    "expect": "2",
+    "note": "empty numeric field | observed in NR"
   },
   {
     "id": "F08c",
@@ -1187,8 +1187,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": "no number in the string"
+    "expect": "abc",
+    "note": "no number in the string | observed in NR"
   },
   {
     "id": "F09a",
@@ -1205,7 +1205,12 @@
       }
     ],
     "expect": null,
-    "note": "control: 5 + 2k"
+    "note": "control: 5 + 2k",
+    "observed": {
+      "one model": "7",
+      "two models": "9",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09b",
@@ -1222,7 +1227,12 @@
       }
     ],
     "expect": null,
-    "note": "control: 5 * 2^k"
+    "note": "control: 5 * 2^k",
+    "observed": {
+      "one model": "10",
+      "two models": "20",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09c",
@@ -1239,7 +1249,12 @@
       }
     ],
     "expect": null,
-    "note": "plain: behaves like multiply"
+    "note": "plain: behaves like multiply",
+    "observed": {
+      "one model": "10",
+      "two models": "20",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09d",
@@ -1256,7 +1271,12 @@
       }
     ],
     "expect": null,
-    "note": "plain: behaves like increment"
+    "note": "plain: behaves like increment",
+    "observed": {
+      "one model": "6",
+      "two models": "8",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09e",
@@ -1273,7 +1293,12 @@
       }
     ],
     "expect": null,
-    "note": ""
+    "note": "",
+    "observed": {
+      "one model": "7",
+      "two models": "11",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09f",
@@ -1290,7 +1315,12 @@
       }
     ],
     "expect": null,
-    "note": "plain: n^2"
+    "note": "plain: n^2",
+    "observed": {
+      "one model": "25",
+      "two models": "625",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09g",
@@ -1307,7 +1337,12 @@
       }
     ],
     "expect": null,
-    "note": ""
+    "note": "",
+    "observed": {
+      "one model": "7",
+      "two models": "8",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09h",
@@ -1324,7 +1359,12 @@
       }
     ],
     "expect": null,
-    "note": ""
+    "note": "",
+    "observed": {
+      "one model": "10",
+      "two models": "30",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09i",
@@ -1341,7 +1381,12 @@
       }
     ],
     "expect": null,
-    "note": ""
+    "note": "",
+    "observed": {
+      "one model": "5",
+      "two models": "7.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09j",
@@ -1358,7 +1403,12 @@
       }
     ],
     "expect": null,
-    "note": "control: 5 - k"
+    "note": "control: 5 - k",
+    "observed": {
+      "one model": "4",
+      "two models": "3",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F09k",
@@ -1375,7 +1425,12 @@
       }
     ],
     "expect": null,
-    "note": ""
+    "note": "",
+    "observed": {
+      "one model": "2.5",
+      "two models": "1.25",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v2-r1",
@@ -1392,7 +1447,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "7",
+      "two models": "8",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v2-r2",
@@ -1409,7 +1469,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "8",
+      "two models": "10",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v2-r3",
@@ -1426,7 +1491,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "9",
+      "two models": "12",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v3-r1",
@@ -1443,7 +1513,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "8",
+      "two models": "9.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v3-r2",
@@ -1460,7 +1535,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "9.5",
+      "two models": "12.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v3-r3",
@@ -1477,7 +1557,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "11",
+      "two models": "15.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-add-v2-r1-n10",
@@ -1494,7 +1579,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "12",
+      "two models": "13",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v2-r1",
@@ -1511,7 +1601,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "10",
+      "two models": "30",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v2-r2",
@@ -1528,7 +1623,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "30",
+      "two models": "150",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v2-r3",
@@ -1545,7 +1645,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "70",
+      "two models": "630",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v3-r1",
@@ -1562,7 +1667,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "15",
+      "two models": "60",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v3-r2",
@@ -1579,7 +1689,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "60",
+      "two models": "600",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v3-r3",
@@ -1596,7 +1711,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "195",
+      "two models": "5460",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-mul-v2-r1-n10",
@@ -1613,7 +1733,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "20",
+      "two models": "60",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v2-r1",
@@ -1630,7 +1755,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "5",
+      "two models": "7.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v2-r2",
@@ -1647,7 +1777,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "7.5",
+      "two models": "18.75",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v2-r3",
@@ -1664,7 +1799,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "11.666666666666666",
+      "two models": "52.5",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v3-r1",
@@ -1681,7 +1821,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "5",
+      "two models": "10",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v3-r2",
@@ -1698,7 +1843,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 2"
+    "note": "k = (selected models) x 2",
+    "observed": {
+      "one model": "10",
+      "two models": "50",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v3-r3",
@@ -1715,7 +1865,12 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 3"
+    "note": "k = (selected models) x 3",
+    "observed": {
+      "one model": "21.666666666666668",
+      "two models": "303.3333333333333",
+      "no models": "unchanged"
+    }
   },
   {
     "id": "F10-pow-v2-r1-n10",
@@ -1732,6 +1887,11 @@
       }
     ],
     "expect": null,
-    "note": "k = (selected models) x 1"
+    "note": "k = (selected models) x 1",
+    "observed": {
+      "one model": "10",
+      "two models": "15",
+      "no models": "unchanged"
+    }
   }
 ]
