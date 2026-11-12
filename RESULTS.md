@@ -196,3 +196,89 @@ With no repetition (k = 1) `power` is n^v, `triangular` is n + v, and
 - **`N+` values** accept `increment` and `decrement`: `3+` +1 gave `4+`, -1 gave `2+`, and -5 gave `-2+` (no floor at 1+).
 - **Edge cases:** `increment 0.5` on `5` gave `5.5`. `increment 2` on an empty field gave `2`. `increment 2` on `abc` left it unchanged. Numeric results are not rounded for display (for example `11.666666666666666`).
 - **A repeat that counts 0 disables its modifier** (all F09 values stayed `5` with no models selected).
+
+
+## Second follow-up run (F11 to F14)
+
+Run on 2026-11-12, commit `69c06d3`.
+
+### F11: other types on dice and N+ strings (single application, no `position`)
+
+| ID | Test | Base | Observed |
+|---|---|---|---|
+| F11a-exponent | exponent 2 on D6+1 | `D6+1` | `D12+2` |
+| F11a-modulo | modulo 2 on D6+5 | `D6+5` | `D0+1` |
+| F11a-multiply | multiply 2 on D6+1 | `D6+1` | `D12+2` |
+| F11a-power | power 2 on D6+1 | `D6+1` | `D36+1` |
+| F11a-triangular | triangular 2 on D6+1 | `D6+1` | `D8+3` |
+| F11b-exponent | exponent 2 on 3+ | `3+` | `6+` |
+| F11b-multiply | multiply 2 on 3+ | `3+` | `6+` |
+| F11b-power | power 2 on 3+ | `3+` | `9+` |
+| F11b-triangular | triangular 2 on 3+ | `3+` | `5+` |
+
+Every number in the string is changed. `exponent` gave the same result as `multiply` on dice and `N+` strings too. `power` squared each number (`D6+1` -> `D36+1`, `3+` -> `9+`); `triangular 2` added 2 to each (`D8+3`); `modulo 2` on `D6+5` gave `D0+1`.
+
+### F12: `cumulative-*` edge cases and repeat rounding
+
+k = (models selected) x r.
+
+| ID | Test | One model | Two models |
+|---|---|---|---|
+| F12-add-frac | cumulative-add 3, base 2.5, r=2 | 7 | 10 |
+| F12-add-neg | cumulative-add 2, base -3, r=2 | 0 | 2 |
+| F12-add-r5 | cumulative-add 2, base 5, r=5 | 11 | 16 |
+| F12-add-v0 | cumulative-add 0, base 5, r=2 | 5 | 5 |
+| F12-add-v1 | cumulative-add 1, base 5, r=3 | 7 | 8.5 |
+| F12-add-vhalf | cumulative-add 0.5, base 5, r=2 | 5.75 | 6.25 |
+| F12-add-vneg | cumulative-add -2, base 5, r=2 | 2 | 0 |
+| F12-mul-frac | cumulative-multiply 3, base 2.5, r=2 | 30 | 300 |
+| F12-mul-neg | cumulative-multiply 2, base -3, r=2 | -18 | -90 |
+| F12-mul-r5 | cumulative-multiply 2, base 5, r=5 | 310 | 10230 |
+| F12-mul-v0 | cumulative-multiply 0, base 5, r=2 | 0 | 0 |
+| F12-mul-v1 | cumulative-multiply 1, base 5, r=3 | 15 | 30 |
+| F12-mul-vhalf | cumulative-multiply 0.5, base 5, r=2 | 3.75 | 4.6875 |
+| F12-mul-vneg | cumulative-multiply -2, base 5, r=2 | 10 | 50 |
+| F12-pow-frac | cumulative-power 3, base 2.5, r=2 | 5 | 25 |
+| F12-pow-neg | cumulative-power 2, base -3, r=2 | -4.5 | -11.25 |
+| F12-pow-r5 | cumulative-power 2, base 5, r=5 | 31 | 511.5 |
+| F12-pow-v0 | cumulative-power 0, base 5, r=2 | 2.5 | 1.25 |
+| F12-pow-v1 | cumulative-power 1, base 5, r=3 | 5 | 5 |
+| F12-pow-vhalf | cumulative-power 0.5, base 5, r=2 | 3.75 | 2.34375 |
+| F12-pow-vneg | cumulative-power -2, base 5, r=2 | -2.5 | -6.25 |
+| F12-ru-ceil | increment 2, repeat value 2, roundUp | 7 | 7 |
+| F12-ru-floor | increment 2, repeat value 2 (floor) | 5 | 7 |
+| F12-ru-v2r3 | increment 2, repeat value 2 repeats 3 | 5 | 11 |
+
+All 42 `cumulative-*` readings (bases 5, -3, 2.5; values 2, 3, 0.5, -2, 1, 0; k from 2 to 10) match the formulas listed earlier in this file and in the spec. The repeat count formula `floor(count / value) * repeats` and `roundUp` (ceiling) were confirmed: `value 2` with one model gives 0 repetitions, or 1 with `roundUp`; `value 2, repeats 3` with two models gives 3 repetitions.
+
+### F13: the `before` condition
+
+Condition: counted node = a specific model (by ID), field `selections`, scope `parent`, `before`, value 1.
+
+| Entry | Condition | Fired? |
+|---|---|---|
+| Model One's weapon | before Model Two | yes |
+| Model One's weapon | before Model One (itself) | yes |
+| Model Two's weapon | before Model One | yes |
+| Model Two's weapon | before Model Two (itself) | yes |
+
+With only Model One present: `M1:M1-before` fired and `M1:M2-before` did not. So in this form `before` was true whenever the counted node existed under the scope, **including the entry itself and nodes after it**; it was not order-dependent. The NR notes describe it as order-dependent. The real data uses it differently (see F14).
+
+### F14: `localConditionGroups`, `before` in a group, and associations
+
+Cost units (100 pts base), several copies added in sequence:
+
+| Unit | Rule | Observed costs per copy |
+|---|---|---|
+| G1 (4 copies) | +10 when a local group finds at least 2 earlier copies (`before any` and `instanceOf` itself, scope `parent`) | 100, 100, 110, 110 |
+| G2 (3 copies) | +10 when at least 2 copies exist (no `before`) | 110, 110, 110 |
+| G3 (2 copies) | +5 when fewer than 2 copies exist (`lessThan`) | 100, 100 (and 105 on the "available" list, where 0 copies are in the roster) |
+
+The roster total (1200 pts) matched the sum of the displayed costs. So a local group counts, among the selections in its scope, those for which all its inner conditions hold, and compares that count with `value` using `type`. With `before any`, the inner condition is true only for selections that come earlier, so G1 charges the third and later copies.
+
+Associations (units E and F, G4):
+
+- E (a `model` with an `associations` entry: name "Leading", `action group`, label "Leader", max 1, scope `force`, allowed only if the target is `instanceOf F`) shows a **"Leading (0/1)"** section in its panel, listing **only F** with a checkbox. **G4 was not offered.**
+- Ticking F gives **"Leading (1/1)"** and the roster **nests E under F**.
+- E's modifier `affects: self.entries.group.recursive.profiles.Melee Weapons` (scope `root-entry`) appended `FROM-E`: to E's own weapon always (`self` is included), and to **F's weapon only while attached** (`F-base, FROM-E`; detached: `F-base`).
+- A constraint with `traverseAssociationGroup: true` (max 1 `Enh`, scope `root-entry`, message "An attached unit can only take 1 Enh.") produced no message with one enhancement in the group. With one on E and one on F **while attached**, the total showed `2 Enh` and the message appeared. **Detaching removed the message** while both enhancements stayed.

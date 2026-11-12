@@ -1907,8 +1907,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D12+2",
+    "note": " | observed in NR"
   },
   {
     "id": "F11a-exponent",
@@ -1923,8 +1923,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D12+2",
+    "note": " | observed in NR"
   },
   {
     "id": "F11a-power",
@@ -1939,8 +1939,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D36+1",
+    "note": " | observed in NR"
   },
   {
     "id": "F11a-triangular",
@@ -1955,8 +1955,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D8+3",
+    "note": " | observed in NR"
   },
   {
     "id": "F11b-multiply",
@@ -1971,8 +1971,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "6+",
+    "note": " | observed in NR"
   },
   {
     "id": "F11b-exponent",
@@ -1987,8 +1987,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "6+",
+    "note": " | observed in NR"
   },
   {
     "id": "F11b-power",
@@ -2003,8 +2003,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "9+",
+    "note": " | observed in NR"
   },
   {
     "id": "F11b-triangular",
@@ -2019,8 +2019,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "5+",
+    "note": " | observed in NR"
   },
   {
     "id": "F11a-modulo",
@@ -2035,8 +2035,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": ""
+    "expect": "D0+1",
+    "note": " | observed in NR"
   },
   {
     "id": "F12-add-r5",
@@ -2062,7 +2062,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 5"
+    "note": "k = models x 5",
+    "observed": {
+      "one model": "11",
+      "two models": "16"
+    }
   },
   {
     "id": "F12-mul-r5",
@@ -2088,7 +2092,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 5"
+    "note": "k = models x 5",
+    "observed": {
+      "one model": "310",
+      "two models": "10230"
+    }
   },
   {
     "id": "F12-pow-r5",
@@ -2114,7 +2122,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 5"
+    "note": "k = models x 5",
+    "observed": {
+      "one model": "31",
+      "two models": "511.5"
+    }
   },
   {
     "id": "F12-add-neg",
@@ -2140,7 +2152,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "0",
+      "two models": "2"
+    }
   },
   {
     "id": "F12-mul-neg",
@@ -2166,7 +2182,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "-18",
+      "two models": "-90"
+    }
   },
   {
     "id": "F12-pow-neg",
@@ -2192,7 +2212,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "-4.5",
+      "two models": "-11.25"
+    }
   },
   {
     "id": "F12-add-frac",
@@ -2218,7 +2242,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "7",
+      "two models": "10"
+    }
   },
   {
     "id": "F12-mul-frac",
@@ -2244,7 +2272,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "30",
+      "two models": "300"
+    }
   },
   {
     "id": "F12-pow-frac",
@@ -2270,7 +2302,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "5",
+      "two models": "25"
+    }
   },
   {
     "id": "F12-add-vhalf",
@@ -2296,7 +2332,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "5.75",
+      "two models": "6.25"
+    }
   },
   {
     "id": "F12-mul-vhalf",
@@ -2322,7 +2362,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "3.75",
+      "two models": "4.6875"
+    }
   },
   {
     "id": "F12-pow-vhalf",
@@ -2348,7 +2392,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "3.75",
+      "two models": "2.34375"
+    }
   },
   {
     "id": "F12-add-vneg",
@@ -2374,7 +2422,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "2",
+      "two models": "0"
+    }
   },
   {
     "id": "F12-mul-vneg",
@@ -2400,7 +2452,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "10",
+      "two models": "50"
+    }
   },
   {
     "id": "F12-pow-vneg",
@@ -2426,7 +2482,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "-2.5",
+      "two models": "-6.25"
+    }
   },
   {
     "id": "F12-add-v1",
@@ -2452,7 +2512,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 3"
+    "note": "k = models x 3",
+    "observed": {
+      "one model": "7",
+      "two models": "8.5"
+    }
   },
   {
     "id": "F12-mul-v1",
@@ -2478,7 +2542,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 3"
+    "note": "k = models x 3",
+    "observed": {
+      "one model": "15",
+      "two models": "30"
+    }
   },
   {
     "id": "F12-pow-v1",
@@ -2504,7 +2572,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 3"
+    "note": "k = models x 3",
+    "observed": {
+      "one model": "5",
+      "two models": "5"
+    }
   },
   {
     "id": "F12-add-v0",
@@ -2530,7 +2602,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "5",
+      "two models": "5"
+    }
   },
   {
     "id": "F12-mul-v0",
@@ -2556,7 +2632,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "0",
+      "two models": "0"
+    }
   },
   {
     "id": "F12-pow-v0",
@@ -2582,7 +2662,11 @@
       }
     ],
     "expect": null,
-    "note": "k = models x 2"
+    "note": "k = models x 2",
+    "observed": {
+      "one model": "2.5",
+      "two models": "1.25"
+    }
   },
   {
     "id": "F12-ru-floor",
@@ -2608,7 +2692,11 @@
       }
     ],
     "expect": null,
-    "note": "one model: 0 repetitions, two: 1"
+    "note": "one model: 0 repetitions, two: 1",
+    "observed": {
+      "one model": "5",
+      "two models": "7"
+    }
   },
   {
     "id": "F12-ru-ceil",
@@ -2634,7 +2722,11 @@
       }
     ],
     "expect": null,
-    "note": "one model: 1 repetition, two: 1"
+    "note": "one model: 1 repetition, two: 1",
+    "observed": {
+      "one model": "7",
+      "two models": "7"
+    }
   },
   {
     "id": "F12-ru-v2r3",
@@ -2660,6 +2752,10 @@
       }
     ],
     "expect": null,
-    "note": "floor(count/2)*3"
+    "note": "floor(count/2)*3",
+    "observed": {
+      "one model": "5",
+      "two models": "11"
+    }
   }
 ]
