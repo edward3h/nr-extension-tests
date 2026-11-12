@@ -1376,5 +1376,362 @@
     ],
     "expect": null,
     "note": ""
+  },
+  {
+    "id": "F10-add-v2-r1",
+    "title": "cumulative-add 2, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-add-v2-r2",
+    "title": "cumulative-add 2, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-add-v2-r3",
+    "title": "cumulative-add 2, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-add-v3-r1",
+    "title": "cumulative-add 3, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 3,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-add-v3-r2",
+    "title": "cumulative-add 3, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 3,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-add-v3-r3",
+    "title": "cumulative-add 3, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 3,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-add-v2-r1-n10",
+    "title": "cumulative-add 2, repeats multiplier 1, base 10",
+    "base": {
+      "Num": "10"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-add",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-mul-v2-r1",
+    "title": "cumulative-multiply 2, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-mul-v2-r2",
+    "title": "cumulative-multiply 2, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-mul-v2-r3",
+    "title": "cumulative-multiply 2, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-mul-v3-r1",
+    "title": "cumulative-multiply 3, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 3,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-mul-v3-r2",
+    "title": "cumulative-multiply 3, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 3,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-mul-v3-r3",
+    "title": "cumulative-multiply 3, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 3,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-mul-v2-r1-n10",
+    "title": "cumulative-multiply 2, repeats multiplier 1, base 10",
+    "base": {
+      "Num": "10"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-multiply",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-pow-v2-r1",
+    "title": "cumulative-power 2, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-pow-v2-r2",
+    "title": "cumulative-power 2, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-pow-v2-r3",
+    "title": "cumulative-power 2, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-pow-v3-r1",
+    "title": "cumulative-power 3, repeats multiplier 1, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 3,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
+  },
+  {
+    "id": "F10-pow-v3-r2",
+    "title": "cumulative-power 3, repeats multiplier 2, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 3,
+        "repeats": "models x 2"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 2"
+  },
+  {
+    "id": "F10-pow-v3-r3",
+    "title": "cumulative-power 3, repeats multiplier 3, base 5",
+    "base": {
+      "Num": "5"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 3,
+        "repeats": "models x 3"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 3"
+  },
+  {
+    "id": "F10-pow-v2-r1-n10",
+    "title": "cumulative-power 2, repeats multiplier 1, base 10",
+    "base": {
+      "Num": "10"
+    },
+    "modifiers": [
+      {
+        "field": "e4ba-e365-6ee4-10a4",
+        "type": "cumulative-power",
+        "value": 2,
+        "repeats": "models x 1"
+      }
+    ],
+    "expect": null,
+    "note": "k = (selected models) x 1"
   }
 ]

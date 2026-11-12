@@ -193,3 +193,34 @@ then untick Model Two (k = 1), then Model One (k = 0).
 | F09i | cumulative-power 2, repeated | `5` | cumulative-power Num 2 (repeated once per selected model) |  | |
 | F09j | decrement 1, repeated | `5` | decrement Num 1 (repeated once per selected model) | control: 5 - k | |
 | F09k | divide 2, repeated | `5` | divide Num 2 (repeated once per selected model) |  | |
+
+
+## cumulative-* tests (F10)
+
+Each modifier repeats `r` times per selected model, so k = (models selected) x r.
+Read each value with one model selected (k = r: 1, 2, 3) and with two (k = 2r:
+2, 4, 6).
+
+| ID | Base | Modifier | Repeats | Observed |
+|---|---|---|---|---|
+| F10-add-v2-r1 | `5` | cumulative-add 2 | models x 1 | |
+| F10-add-v2-r2 | `5` | cumulative-add 2 | models x 2 | |
+| F10-add-v2-r3 | `5` | cumulative-add 2 | models x 3 | |
+| F10-add-v3-r1 | `5` | cumulative-add 3 | models x 1 | |
+| F10-add-v3-r2 | `5` | cumulative-add 3 | models x 2 | |
+| F10-add-v3-r3 | `5` | cumulative-add 3 | models x 3 | |
+| F10-add-v2-r1-n10 | `10` | cumulative-add 2 | models x 1 | |
+| F10-mul-v2-r1 | `5` | cumulative-multiply 2 | models x 1 | |
+| F10-mul-v2-r2 | `5` | cumulative-multiply 2 | models x 2 | |
+| F10-mul-v2-r3 | `5` | cumulative-multiply 2 | models x 3 | |
+| F10-mul-v3-r1 | `5` | cumulative-multiply 3 | models x 1 | |
+| F10-mul-v3-r2 | `5` | cumulative-multiply 3 | models x 2 | |
+| F10-mul-v3-r3 | `5` | cumulative-multiply 3 | models x 3 | |
+| F10-mul-v2-r1-n10 | `10` | cumulative-multiply 2 | models x 1 | |
+| F10-pow-v2-r1 | `5` | cumulative-power 2 | models x 1 | |
+| F10-pow-v2-r2 | `5` | cumulative-power 2 | models x 2 | |
+| F10-pow-v2-r3 | `5` | cumulative-power 2 | models x 3 | |
+| F10-pow-v3-r1 | `5` | cumulative-power 3 | models x 1 | |
+| F10-pow-v3-r2 | `5` | cumulative-power 3 | models x 2 | |
+| F10-pow-v3-r3 | `5` | cumulative-power 3 | models x 3 | |
+| F10-pow-v2-r1-n10 | `10` | cumulative-power 2 | models x 1 | |
