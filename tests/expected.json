@@ -13,8 +13,8 @@
         "position": 0
       }
     ],
-    "expect": "D8+1",
-    "note": "first number"
+    "expect": "D8+3",
+    "note": "observed in NR: position 0 behaves like unset (all numbers)"
   },
   {
     "id": "T01b",
@@ -46,8 +46,8 @@
         "value": 2
       }
     ],
-    "expect": "D8+1",
-    "note": "default position (assumed first number)"
+    "expect": "D8+3",
+    "note": "observed in NR: unset changes every number"
   },
   {
     "id": "T02",
@@ -200,8 +200,8 @@
         "arg": "Heavy"
       }
     ],
-    "expect": null,
-    "note": "record: \"Light, Light\" (all) or \"Light, Heavy\" (first)"
+    "expect": "Light, Light",
+    "note": "observed in NR: all matches replaced"
   },
   {
     "id": "T08a",
@@ -346,8 +346,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": "record (25 if value^... or 32 if 2^5)"
+    "expect": "25",
+    "note": "observed in NR"
   },
   {
     "id": "T11c",
@@ -362,8 +362,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": "record; compare with T11b"
+    "expect": "10",
+    "note": "observed in NR (unexplained)"
   },
   {
     "id": "T11d",
@@ -378,8 +378,8 @@
         "value": 3
       }
     ],
-    "expect": null,
-    "note": "record"
+    "expect": "8",
+    "note": "observed in NR (unexplained)"
   },
   {
     "id": "T11e",
@@ -394,8 +394,8 @@
         "value": 2
       }
     ],
-    "expect": null,
-    "note": "record: 2.5, 2 or 3 (rounding)"
+    "expect": "2.5",
+    "note": "observed in NR: no rounding"
   },
   {
     "id": "T11f",
@@ -480,8 +480,8 @@
         "skipIfPresent": "3"
       }
     ],
-    "expect": null,
-    "note": "record: 5 if ignored, 3 if honoured"
+    "expect": "5",
+    "note": "observed in NR: skipIfPresent ignored on increment"
   },
   {
     "id": "T14a",
@@ -564,8 +564,8 @@
         "join": "\n"
       }
     ],
-    "expect": null,
-    "note": "record: A then B on a new line?"
+    "expect": "A\nB",
+    "note": "observed in NR"
   },
   {
     "id": "T15",
