@@ -324,3 +324,25 @@ Run on newrecruit.eu with `M1 Costs.json`; the exported roster is `rosters/m1-co
 | A group member counts as a child of its unit | Opt A (from the Options group) is `from: group`, cost 1 pt each, number 2. |
 
 Caveat: a link's cost replacing the target's was seen with `costs` on the link. Links also carry other overlays (`constraints`, `modifiers`, `categoryLinks`), which these tests do not cover.
+
+## Scopes and counting (M2 Scopes)
+
+Run on newrecruit.eu with `M2 Scopes.json`. Each profile's `Num` is incremented once per unit that a repeat's query counts, so the exported `Num` is NR's count. `rosters/m2-scopes.roster.json` holds the export: 1,284 profiles on six hosts (two Q Unit A, Qm, Qu, Qv and Qg1), each carrying 214 queries. A first implementation written from the spec matched 87% of them; the rules below are what the mismatches taught, and an engine built on them matches 1,224 of 1,284 (the rest are `ancestor`, below).
+
+Tree used (amounts are per parent): `Q Unit A` (1) > `Qm` (3) > `Qu` (2 per Qm, 6 in all) > `Qv` (2 per Qu, 12 in all); `Qm2` 1; `Qup` 1; group `Qgroup` > `Qg1` 2, `Qg2` 1; and two `Q Unit B`, one holding `Qb` 4.
+
+| Observation | Evidence |
+|---|---|
+| **A count is relative to the scope node.** Amounts multiply only below it. | From Qm (3), `self` counting everything below gives 6 (Qu 2 + Qv 4), not 18; direct children only gives 2. From Qu, Qv counts as 2, not 12. |
+| **`-self` adds the node itself, at its own amount** (not its total). | `model-self` from Qm: 3 + 2 + 4 = 9. At a host where amount and total differ (Qv: 2 and 12) it counted 2. |
+| **A cost query leaves out the scope node's own cost,** even with `-self`. | `root-entry-self` for pts gave 52, not 62: the unit's own 10 was left out. Costs below are unit cost times the relative count. |
+| **Forces and categories are transparent** when counting the next level. | `roster` or `parent` from a top-level unit, direct children only: 3, the three units in the roster. |
+| **`non-upgrade-entry` falls back to the roster** when no entry above qualifies. | From the top-level Q Unit A it counted the whole roster. `unit` from there counted nothing. |
+| **`group` is a scope and counts the group's members** (the entries in the same group below the same parent, including here). | From Qg1: 3 (Qg1 2 + Qg2 1). |
+| **Scope `self` with the node's own entry id as `childId` counts like `any`.** | From Qm, `self` with Qm's id gave 2 and 6, the same as `any` (direct, deep). From Q Unit A, `self` with Qm's id gave 3 (just the Qm). The same held for the link id. |
+| **`self-self` is not a scope** (counted nothing); `-self` does not apply to `self` or `ancestor`. | |
+| **`atLeast`, `before` and the rest** behaved as in the spec (see the T16, F13 and F14 results above). | |
+| **`ancestor` counting is not understood.** Most counts are the same from every host (any, deep: 33 from each of four hosts), as if it were the roster, but with some `childId`s a host inside Qm or Qu adds 12 (Qm: 15 from Qm and Qu, 3 from Q Unit A and Qg1; Qgroup: 15 from Qu only). `instanceOf` at `ancestor` is a different matter and follows the chain. | |
+| Fields: `limit::pts` at roster scope reads -1 with no limit; `forces` at roster counts the force. | |
+
+Not tested here: a scope that resolves to nothing used on a modifier's condition (does the modifier apply?), `percentValue`, `includeChildForces` and child forces, and conditions on entries not yet in the roster (G3 showed 105 on the add list).
