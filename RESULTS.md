@@ -282,3 +282,29 @@ Associations (units E and F, G4):
 - Ticking F gives **"Leading (1/1)"** and the roster **nests E under F**.
 - E's modifier `affects: self.entries.group.recursive.profiles.Melee Weapons` (scope `root-entry`) appended `FROM-E`: to E's own weapon always (`self` is included), and to **F's weapon only while attached** (`F-base, FROM-E`; detached: `F-base`).
 - A constraint with `traverseAssociationGroup: true` (max 1 `Enh`, scope `root-entry`, message "An attached unit can only take 1 Enh.") produced no message with one enhancement in the group. With one on E and one on F **while attached**, the total showed `2 Enh` and the message appeared. **Detaching removed the message** while both enhancements stayed.
+
+## Duplicate ids (D1 to D2)
+
+Run on newrecruit.eu with the files `Dup Library X/Y/W.json` and `Dup Z1` to `Dup Z7.json` (see the README for the setup). Each Z catalogue was made into a list and the linked unit was added; the Txt value of its profile shows which copy of the shared entry was resolved.
+
+| Test | Result |
+|---|---|
+| D1a Z1 links X then Y | `from-X` |
+| D1b Z2 links Y then X | `from-Y` |
+| D1c Z3 has its own copy and links X, Y | `from-Z3` |
+| D1d Z4 links X only | `from-X` |
+| D1e Z4 link to S2 (X and the game system define it) | `from-GS` |
+| D1f Z5 has no catalogue links | list could not be created: "This Army Book could not be loaded." |
+| D1g Z7 links W, which links X | `from-X` |
+| D2 duplicate constraint id, modifier on one entry | only that entry's constraint changed |
+
+Reading:
+
+- **Resolution is by scope, not a global id index.** Candidates are the catalogue itself, the catalogues it links (followed transitively), and the game system.
+- **Order of preference seen so far:** the catalogue's own copy, then the game system, then linked catalogues in link order (first link wins). The own copy against the game system copy was not tested.
+- **An unreachable target is fatal.** The whole catalogue fails to load, so it is not a warning.
+- **Modifiers address constraints through the owning entry.** The same constraint id on two entries did not cause cross-talk (D2).
+
+Caveats: NR applies a data update on the second page load after a push, so check the Games page ("last update") and the faction list before trusting a run. A first D2 attempt with a `min 1` constraint was invalid, because NR auto-selects such upgrades. `max 1` was also unusable, since it renders as a checkbox; `max 0` raised to 1 by the modifier worked.
+
+Not tested: the catalogue's own copy against the game system's copy, three-way ties, duplicate ids that are not links (for example two `sharedProfiles` with one id), and `field` ids that name a constraint on a different entry.

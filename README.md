@@ -287,11 +287,11 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 
 | ID | Setup | Question | Observed |
 |---|---|---|---|
-| D1a | Z1: links X then Y; both define S ("from-X", "from-Y") | which copy does the link show | |
-| D1b | Z2: links Y then X | does link order matter | |
-| D1c | Z3: defines its own S ("from-Z3") and links X, Y | does the catalogue's own copy win | |
-| D1d | Z4: links X only | control: from-X expected | |
-| D1e | Z4: link to S2, defined in X and in the game system | game system or catalogue copy | |
-| D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | |
-| D1g | Z7: links library W, which links X; link to S | are catalogue links followed transitively | |
-| D2 | Z6: two units each with an `Opt` that has a `max 0` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 5 once APPLY1 is selected. Set both Opts to quantity 2 | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | |
+| D1a | Z1: links X then Y; both define S ("from-X", "from-Y") | which copy does the link show | from-X. The first catalogue link (X) won. |
+| D1b | Z2: links Y then X | does link order matter | from-Y. Link order decides: the first link (Y) won. |
+| D1c | Z3: defines its own S ("from-Z3") and links X, Y | does the catalogue's own copy win | from-Z3. The catalogue's own copy won over both linked copies. |
+| D1d | Z4: links X only | control: from-X expected | from-X (control). |
+| D1e | Z4: link to S2, defined in X and in the game system | game system or catalogue copy | from-GS. The game system copy won over the linked catalogue X copy. |
+| D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | The catalogue did not load: "This Army Book could not be loaded." An id that is not reachable through catalogue links is a hard failure. |
+| D1g | Z7: links library W, which links X; link to S | are catalogue links followed transitively | from-X. Catalogue links are followed transitively (Z7 to W to X). |
+| D2 | Z6: two units each with an `Opt` that has a `max 0` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 5 once APPLY1 is selected. Set both Opts to quantity 2 | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | E1's error cleared (and E2's stayed) once APPLY1 was selected. The modifier changed only its own entry's constraint, although another entry has a constraint with the same id. |
