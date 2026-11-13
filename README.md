@@ -323,3 +323,7 @@ Q Unit B > Qb (model)
 ```
 
 Each query is a scope (19 of them, including ids and an unknown one), a `childId` (any, model, upgrade, unit, an entry id, a group id, a category id), and deep or direct. Extra profiles count a cost, forces, and the cost limit. An engine can read the query from each profile's modifier and compare its own count with the exported `Num` (see `rosters/m2-scopes.roster.json`).
+
+## Constraint tests (M5 Constraints catalogue)
+
+`M5 Constraints.json` has ten units, each isolating one part of constraint behaviour: K0 and K1 unit-level `min`, `max` and `exactly`; K2 constraints owned by children and groups; K3 `percentValue`; K4 hidden entries; K5 scopes with several copies of a unit; K6 `automatic`; K7 a modifier on a constraint's value; K8 cost fields and `negative`; K9 constraints with no message. Every constraint has a message that names it, except K9's. Recorded results are in `RESULTS.md` and `tests/constraints-observed.json`.

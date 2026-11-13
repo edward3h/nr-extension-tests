@@ -369,3 +369,23 @@ Run on newrecruit.eu: one modifier on `Txt` per profile, on 14 base values (empt
 | **An empty value counts as 0 for arithmetic** (`increment 2` gives `2`, `decrement 2` gives `-2`), **but `floor` and `ceil` leave it empty.** | |
 | **Text with no digits is left alone** (`abc`). | |
 | `position` behaved as in section 5.7, including on `x1y22z` (1 changes the 1, 2 the 22, -1 the last, 0 all). | |
+
+## Constraints and validation (M5 Constraints, units K0 to K9)
+
+Run on newrecruit.eu. Messages are read from the error icon's tooltip on a unit's row, which lists that unit's messages sorted alphabetically (the roster's count adds them all, duplicates included). Recorded states and messages: `tests/constraints-observed.json` (123 states, plus K5 with one to three units).
+
+| Observation | Evidence |
+|---|---|
+| `min`, `max`, `exactly` compare the count with the limit; `max -1` never fails; `negative: true` makes `max -1` fail at 0 and `min -1` never fail | K1 (72 states), K8 |
+| `percentValue` is a percentage of everything in scope; 0 of 0 is 0% | K3 |
+| A child's `min` (scope parent) fails while the child is absent; its `max` is not evaluated when absent; no `childId` means the owner's entry | K2 `x`, `y`, `z` |
+| Group constraints: `self` is the group's members, `parent` the unit | K2 `GA`, `GB` |
+| A `min` on a hidden entry does not fire; a selected hidden entry gives "{parent} {entry} cannot be selected while hidden"; a modifier can unhide it | K4 |
+| Scopes `force`, `parent`, `primary-category`, `roster` count same-entry units; `root-entry` and `self` do not | K5 with 1, 2, 3 units |
+| A modifier on a constraint's id changes its limit | K7 |
+| A cost-field constraint counts children's costs only (`max 12` fails at 15, passes at 10) | K8 |
+| Cost limit message "Roster has N pts too many (max L)"; equal passes; -1 is none | m5b roster |
+| Default message wording | K9 |
+| **Builder, not validation:** a new roster gets each root unit as many times as its largest `min`/`exactly`, ignoring `childId`; adding a unit selects children up to their `min`, `automatic` or not; `automatic` only stops the input going below it; a group with `max 1` over `any` acts as a radio group | K0, K1, K2, K6 |
+
+Not tested: force and category constraints, `shared: false`, `exactly` above its limit (inputs were clamped), the group's own id as `childId` (radio behaviour prevents it).
