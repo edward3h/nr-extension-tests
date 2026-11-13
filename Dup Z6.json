@@ -29,15 +29,15 @@
                 "scope": "parent",
                 "shared": true,
                 "type": "max",
-                "value": 1,
-                "message": "MSG-E1: too many Opt E1"
+                "value": 0,
+                "message": "MSG-E1: Opt not allowed: E1"
               }
             ],
             "modifiers": [
               {
                 "type": "set",
                 "field": "fa61-f020-ad52-286d",
-                "value": 5,
+                "value": 1,
                 "conditions": [
                   {
                     "childId": "349e-2c8c-9e55-4299",
@@ -77,8 +77,8 @@
                 "scope": "parent",
                 "shared": true,
                 "type": "max",
-                "value": 1,
-                "message": "MSG-E2: too many Opt E2"
+                "value": 0,
+                "message": "MSG-E2: Opt not allowed: E2"
               }
             ]
           }

@@ -294,4 +294,4 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 | D1e | Z4: link to S2, defined in X and in the game system | game system or catalogue copy | |
 | D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | |
 | D1g | Z7: links library W, which links X; link to S | are catalogue links followed transitively | |
-| D2 | Z6: two units each with an `Opt` that has a `max 1` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 5 once APPLY1 is selected. Set both Opts to quantity 2 | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | |
+| D2 | Z6: two units each with an `Opt` that has a `max 0` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 5 once APPLY1 is selected. Set both Opts to quantity 2 | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | |
