@@ -389,3 +389,21 @@ Run on newrecruit.eu. Messages are read from the error icon's tooltip on a unit'
 | **Builder, not validation:** a new roster gets each root unit as many times as its largest `min`/`exactly`, ignoring `childId`; adding a unit selects children up to their `min`, `automatic` or not; `automatic` only stops the input going below it; a group with `max 1` over `any` acts as a radio group | K0, K1, K2, K6 |
 
 Not tested: force and category constraints, `shared: false`, `exactly` above its limit (inputs were clamped), the group's own id as `childId` (radio behaviour prevents it).
+
+## Instantiation (M6 Instantiate, units R1 to R7 and C1 to C6)
+
+New roster created from the catalogue, then each C unit added once. Results read from the roster tree.
+
+| Observation | Evidence |
+|---|---|
+| Root units are added `max(min, exactly)` times whatever the scope: `force` min 2 gave 2, `roster` min 1 gave 1, `parent` exactly 2 gave 2, `self` min 1 gave 1; `min 3` with `max 2` gave 3 | R1, R2, R3, R6, R7 |
+| A hidden root unit is not offered and not added | R4 |
+| Children are added recursively: Model (min 1) > Upgrade x2 > Upgrade x1 under each | C1: `1x M: 2x U (V)` |
+| A group with `min 1` and a default gets the default (not the first) | C2: `G2 2` |
+| A group with `min 2` and no default gets the first member twice | C3: `2x G3 1` |
+| Child minimums: `min 2` gives 2; `exactly 2` adds none; scope `self` and `root-entry` add one; scope `force` none; `min 0` none; `childId` any adds one | C4: `2x a, c, e, g` |
+| Links: a constraint on the target entry or on the link both add | C5: `Sh1, 2x Sh2` |
+| A group member's own `min` adds it | C6: `G6 1` |
+| Unit-level constraints counting a child add nothing (M5: K1 `min 1 b`, K9 `min 1 b`); a hidden child with a `min` is added anyway (K4 `h`) | M5 observations |
+
+Not tested: scopes `roster`, `primary-category`, `ancestor`, `unit`/`model`; group constraints with scope `parent`; what happens on duplicating a unit.
