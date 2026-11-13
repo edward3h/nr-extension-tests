@@ -407,3 +407,42 @@ New roster created from the catalogue, then each C unit added once. Results read
 | Unit-level constraints counting a child add nothing (M5: K1 `min 1 b`, K9 `min 1 b`); a hidden child with a `min` is added anyway (K4 `h`) | M5 observations |
 
 Not tested: scopes `roster`, `primary-category`, `ancestor`, `unit`/`model`; group constraints with scope `parent`; what happens on duplicating a unit.
+
+## Associations (M7 Associations; leaders L*, bodyguards B*, T*, X*, M*)
+
+Units carry a Melee Weapons profile whose `Keywords` read `<unit>-own`, plus a child upgrade with a profile `<unit>-child`. A leader's `append` modifier adds `FROM-<unit>` to the path in its `affects` (modifier `scope` `self`). Leaders are attached to B1 with the "Leading" checkbox.
+
+**`affects` paths** (own = the holder's own profiles, child = its child upgrade's profiles; B1 = the attached bodyguard):
+
+| Path | Detached | Attached |
+|---|---|---|
+| `profiles.X` (no tokens) | own | own |
+| `self.profiles.X` | own | own |
+| `entries.profiles.X` | child | child |
+| `entries.recursive.profiles.X` | child | child |
+| `group.profiles.X` | own | own, B1 own |
+| `self.group.profiles.X` | own | own, B1 own |
+| `group.recursive.profiles.X` | own | own, B1 own (children not reached) |
+| `group.entries.profiles.X` | child | nothing |
+| `self.entries.group.profiles.X` | own, child | own, B1 own (children not reached) |
+
+- The group is symmetric: a bodyguard's modifier reaches the leader (`lbm-own, FROM-lbm, FROM-bm` and `bm-own, FROM-bm, FROM-lbm`).
+- With one bodyguard and three leaders attached the group is all four units. Each unit sees its own modifier first, then the others in roster order (B6, M5, M6, M7: B6 `b6-own, FROM-b6, FROM-m5, FROM-m6`; M5 `m5-own, FROM-m5, FROM-b6, FROM-m6`; M6 `FROM-m6, FROM-b6, FROM-m5`). A unit with no modifier of its own still receives the others (M7 `FROM-b6, FROM-m5, FROM-m6`). Attach order and roster order were the same, so they were not separated.
+
+**`traverseAssociationGroup`** (constraint `max 1` of `upgrade`, owner T1 to T6, bodyguard B5; one perk upgrade on each):
+
+- scope `root-entry` and `self`: no message with one perk on the leader, or with a perk on each while detached; the message appears when both are attached (T1, T3). The same constraint without the flag never fires (T2).
+- scope `force`: fires detached as well (both units are in the force) and attached (T4). With `max 3`, perks 2 + 1 gave no message and 3 + 1 did (T9), so the force is counted once, not once per group member.
+- scope `parent` from a unit is the roster, so it fires detached (T6).
+- `min 2` (T5): a message with one perk, and still with a perk on each while detached; attached, 1 + 1 satisfies it.
+
+**Association definitions and limits:**
+
+- A leader's panel offers every unit in the scope that matches `childId` and the association's conditions, except the leader itself (M3: every other unit including the other M3; M2: B1 and B2 only).
+- The UI does not stop you going over `max`: M2 (max 2) attached to three units reads "Leading m2 (3/2)" with the message "Units M2 max 2 (B1 or B2) has 1 unit too many selected in Leading m2 (3/2)".
+- Below `min`, M1 (min 1) reads "Units M1 min 1 max 1 needs 1 more unit selected in Leading m1 (0/1)" and the message goes when a unit is attached.
+- Messages are `{host} needs N more {childId} selected in {association name} ({count}/{min})` and `{host} has N {childId} too many selected in {association name} ({count}/{max})`. The host is the leader (the roster showed "Units M1 ..." as a category prefix).
+- Constraints on the `associations` field count nothing in any form tried: `min 1` on the bodyguard with a leader attached still fires (B4, X1 to X4, X6, X7, whatever `childId`: `any`, the label `Leader`, the association name, `unit`, `Support`, scope `self` or `root-entry`), and `max` never fires (B3 with two Leaders and two Supports, B6 with three of `any`, X5 `max 0`).
+- A panel for a second leader on B3 lists the bodyguard's existing attachments by label (`Leader: P1`, `Support: S1`), but does not stop the attachment.
+
+Not tested: `ids`, `of` and `labelMember`; association scopes other than `force`; a leader attached to two units; `affects` with an id filter and `group`; `affects` targets `forces`, `rules` and `associations`; attaching in a roster with several forces.
