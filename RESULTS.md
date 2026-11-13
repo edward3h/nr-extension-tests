@@ -356,3 +356,16 @@ Each of 50 profiles per host (300 in `rosters/m2-scopes.roster.json`) increments
 - This matches how a repeat behaves with an unresolvable scope (a count of 0, so the modifier is disabled).
 
 Not covered: `instanceOf` with a scope that resolves to nothing.
+
+## Number tokens in odd values (M2 Scopes, profiles `A.K001` to `A.K124`)
+
+Run on newrecruit.eu: one modifier on `Txt` per profile, on 14 base values (empty, `abc`, `abc2`, `2.5`, `-3`, `D6-3`, `1.5+2`, `3+`, `10`, `x1y22z`, `0`, `007`, `1e3`, `2 3`) with eight operations, and `position` 1, 2, 3, -1, -2 and 0 on `x1y22z` and `D6+1+2`. The engine matches all of them after the corrections below.
+
+| Observation | Evidence |
+|---|---|
+| **A number is a run of digits, with a decimal part if a point sits between digits.** | `2.5` is one number; `1.5+2` has two; `1e3` has two (1 and 3); `2 3` has two; `x1y22z` has 1 and 22. |
+| **A minus sign directly before digits is part of the number, wherever it is.** | `D6-3` has 6 and -3: `increment 2` gives `D8-1`, `decrement 2` `D4-5`, `floor 5` `D65` (the `-3` became `5`), `ceil 1` `D1-3`, `power 2` `D369`. |
+| **A number the operation leaves as it was keeps its original text.** | `floor 5` on `007` stays `007`. |
+| **An empty value counts as 0 for arithmetic** (`increment 2` gives `2`, `decrement 2` gives `-2`), **but `floor` and `ceil` leave it empty.** | |
+| **Text with no digits is left alone** (`abc`). | |
+| `position` behaved as in section 5.7, including on `x1y22z` (1 changes the 1, 2 the 22, -1 the last, 0 all). | |
