@@ -308,3 +308,19 @@ Reading:
 Caveats: NR applies a data update on the second page load after a push, so check the Games page ("last update") and the faction list before trusting a run. A first D2 attempt with a `min 1` constraint was invalid, because NR auto-selects such upgrades. `max 1` was also unusable, since it renders as a checkbox; `max 0` raised to 1 by the modifier worked.
 
 Not tested: the catalogue's own copy against the game system's copy, three-way ties, duplicate ids that are not links (for example two `sharedProfiles` with one id), and `field` ids that name a constraint on a different entry.
+
+## Costs without modifiers (M1 Costs)
+
+Run on newrecruit.eu with `M1 Costs.json`; the exported roster is `rosters/m1-costs.roster.json`.
+
+| Observation | Detail |
+|---|---|
+| An entry link's own cost **replaces** its target's cost for that cost type | M1 Hero: target 30 pts, link 5 pts, shown 5 pts. Banner base: target 7 pts, link 3 pts, shown 3 pts (not 10 and not 7). |
+| Cost types the link does not mention come from the target | M1 Shared unit: target 20 pts and 2 Enh, link 3 pts, shown 3 pts and 2 Enh. |
+| A selection's cost is its (effective) cost times its **total number** | Trooper 5 pts, number 3, cost 15. Opt A 1 pt, number 2, cost 2. |
+| A child's number is per parent, so total numbers multiply down the tree | Gun entered as 2 under Trooper 3 exports as `number` 6 with cost 12 (2 pts times 6). The squad showed 10 + 3 + 2 + 15 + 12 = 42 at that point. |
+| The exported `number` is the total, and the exported `costs` are already totals | Gun: `number` 6, `costs` pts 12. |
+| The roster total is the plain sum of the selection costs | 5 + 3 + 10 + 3 + 15 + 12 + 2 = 50 pts; Enh 2. No multiplication by `number` is needed on top. |
+| A group member counts as a child of its unit | Opt A (from the Options group) is `from: group`, cost 1 pt each, number 2. |
+
+Caveat: a link's cost replacing the target's was seen with `costs` on the link. Links also carry other overlays (`constraints`, `modifiers`, `categoryLinks`), which these tests do not cover.
