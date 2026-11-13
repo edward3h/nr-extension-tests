@@ -303,3 +303,7 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 - `rosters/extension-tests.roster.json`: the "Extension Tests Catalogue" list (units A, E, F, G1 to G4, with `APPLY` selected, so every gated modifier in T01 to T19 is active; total 1200 pts, 2 Enh).
 - `rosters/extension-tests-attached.roster.json`: the same list after attaching leader E to bodyguard F (the "Leading" checkbox). It shows where attachment is stored: `associations` on E and `incomingAssociations` on F. Total 1250 pts because a second E was added.
 - `rosters/dup-constraints.roster.json`: the `Dup Z6` list from test D2 (two copies of E1, one with APPLY1, and E2).
+
+## Cost tests (M1 Costs catalogue)
+
+`M1 Costs.json` checks how costs combine without modifiers: quantities down the tree, an entry link's own cost against its target's, and groups. Units: **M1 Squad** (10 pts) with a **Trooper** model (5 pts) that can take a **Gun** (2 pts), an **Options** group (Opt A 1 pt, Opt B 4 pts), and a link to **Banner base** (7 pts) whose link adds 3 pts; **M1 Shared unit** (20 pts and 2 Enh) linked from the catalogue with a link cost of 3 pts; **M1 Hero** (30 pts) linked with a link cost of 5 pts. Results are in `RESULTS.md`; exported rosters are in `rosters/`.
