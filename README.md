@@ -308,3 +308,18 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 ## Cost tests (M1 Costs catalogue)
 
 `M1 Costs.json` checks how costs combine without modifiers: quantities down the tree, an entry link's own cost against its target's, and groups. Units: **M1 Squad** (10 pts) with a **Trooper** model (5 pts) that can take a **Gun** (2 pts), an **Options** group (Opt A 1 pt, Opt B 4 pts), and a link to **Banner base** (7 pts) whose link adds 3 pts; **M1 Shared unit** (20 pts and 2 Enh) linked from the catalogue with a link cost of 3 pts; **M1 Hero** (30 pts) linked with a link cost of 5 pts. Results are in `RESULTS.md`; exported rosters are in `rosters/`.
+
+## Scope and query tests (M2 Scopes catalogue)
+
+`M2 Scopes.json` checks how New Recruit counts for conditions and repeats. Each profile has `Num` 0 and one modifier that increments `Num` by 1, repeated once per unit counted by a query (`repeats` with a scope, a `childId`, `includeChildSelections`, and a field). The exported `Num` is then the count NR computed. Profiles sit on four hosts: **Q Unit A** (A), its model **Qm** (M), the upgrade **Qu** inside Qm (U), and the upgrade **Qg1** in the group **Qgroup** (G). The tree is:
+
+```
+Q Unit A (categories: Units primary, Heroes)
+  Qm (model) > Qu (upgrade) > Qv (upgrade)
+  Qm2 (model)
+  Qup (upgrade)
+  Qgroup > Qg1, Qg2 (upgrades)
+Q Unit B > Qb (model)
+```
+
+Each query is a scope (19 of them, including ids and an unknown one), a `childId` (any, model, upgrade, unit, an entry id, a group id, a category id), and deep or direct. Extra profiles count a cost, forces, and the cost limit. An engine can read the query from each profile's modifier and compare its own count with the exported `Num` (see `rosters/m2-scopes.roster.json`).

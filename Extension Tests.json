@@ -12,6 +12,11 @@
         "name": "Units",
         "id": "8e51-8031-ab34-a492",
         "hidden": false
+      },
+      {
+        "name": "Heroes",
+        "id": "432f-e55a-e081-6031",
+        "hidden": false
       }
     ],
     "costTypes": [
