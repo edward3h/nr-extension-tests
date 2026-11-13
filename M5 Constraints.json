@@ -1,0 +1,164 @@
+{
+  "catalogue": {
+    "name": "M5 Constraints",
+    "id": "c7c9-5096-beaf-c9cd",
+    "authorName": "extension-tests",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "11a0-a9a3-bb5c-de4b",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "entryLinks": [
+      {
+        "name": "K1 Unit",
+        "id": "1531-be0b-36d7-9355",
+        "hidden": false,
+        "import": true,
+        "targetId": "1b6f-a364-7897-3f18",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "c321-4303-9fe8-904b",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "K1 Unit",
+        "id": "1b6f-a364-7897-3f18",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "K1 a",
+            "id": "a115-591c-4110-abfd",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "K1 b",
+            "id": "8c02-cc1f-deec-a96f",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "K1 c",
+            "id": "66a6-80e9-b4e9-8584",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "K1 d",
+            "id": "7a80-14da-512d-70e3",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          },
+          {
+            "name": "K1 e",
+            "id": "00fb-81f7-fbc1-5398",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 1,
+            "field": "selections",
+            "scope": "self",
+            "childId": "a115-591c-4110-abfd",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "3caf-9b31-1c44-0144",
+            "name": "m1 max 1 of a",
+            "message": "m1 max 1 of a"
+          },
+          {
+            "type": "min",
+            "value": 1,
+            "field": "selections",
+            "scope": "self",
+            "childId": "8c02-cc1f-deec-a96f",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "8982-edb3-5787-ccd3",
+            "name": "m2 min 1 of b",
+            "message": "m2 min 1 of b"
+          },
+          {
+            "type": "exactly",
+            "value": 2,
+            "field": "selections",
+            "scope": "self",
+            "childId": "66a6-80e9-b4e9-8584",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "e784-54a0-5a3b-057d",
+            "name": "m3 exactly 2 of c",
+            "message": "m3 exactly 2 of c"
+          },
+          {
+            "type": "max",
+            "value": -1,
+            "field": "selections",
+            "scope": "self",
+            "childId": "7a80-14da-512d-70e3",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "0ee2-58c2-00c9-ff5a",
+            "name": "m4 max -1 of d",
+            "message": "m4 max -1 of d"
+          }
+        ]
+      }
+    ]
+  }
+}
