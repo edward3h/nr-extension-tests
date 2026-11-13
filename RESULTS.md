@@ -346,3 +346,13 @@ Tree used (amounts are per parent): `Q Unit A` (1) > `Qm` (3) > `Qu` (2 per Qm, 
 | Fields: `limit::pts` at roster scope reads -1 with no limit; `forces` at roster counts the force. | |
 
 Not tested here: a scope that resolves to nothing used on a modifier's condition (does the modifier apply?), `percentValue`, `includeChildForces` and child forces, and conditions on entries not yet in the roster (G3 showed 105 on the add list).
+
+## Conditions whose scope resolves to nothing (M2 Scopes, condition battery)
+
+Each of 50 profiles per host (300 in `rosters/m2-scopes.roster.json`) increments `Num` by 1 when one condition holds: a scope (`no-such-scope-id`, `upgrade`, `group`, `self`, `roster`) with `childId` any and one of ten comparisons. `Num` is 1 if the modifier applied.
+
+- **A scope that resolves to nothing is not disabled: the count is 0 and the comparison is made.** With an unknown scope id (nothing resolves at any host), and with `upgrade` or `group` at the hosts that have no such ancestor, `atLeast 0`, `atMost 0`, `atMost 1`, `lessThan 1` and `equalTo 0` all applied, and `atLeast 1`, `lessThan 0`, `equalTo 1`, `greaterThan 0` and `notEqualTo 0` did not. At hosts where the scope did resolve, the usual count was compared.
+- **The BattleScribe quirk held:** at scope `self`, `atLeast 0` behaved like `atLeast 1` (it applied only at hosts that have something below them).
+- This matches how a repeat behaves with an unresolvable scope (a count of 0, so the modifier is disabled).
+
+Not covered: `instanceOf` with a scope that resolves to nothing.
