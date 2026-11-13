@@ -295,3 +295,10 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 | D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | The catalogue did not load: "This Army Book could not be loaded." An id that is not reachable through catalogue links is a hard failure. |
 | D1g | Z7: links library W, which links X; link to S | are catalogue links followed transitively | from-X. Catalogue links are followed transitively (Z7 to W to X). |
 | D2 | Z6: two units each with an `Opt` that has a `max 0` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 1 once APPLY1 is selected. Tick both Opts | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | E1's error cleared (and E2's stayed) once APPLY1 was selected. The modifier changed only its own entry's constraint, although another entry has a constraint with the same id. |
+
+## Exported rosters
+
+`rosters/` holds rosters exported from NR with Export, then json. They show the roster file format and record the values NR computed (costs and profile text after modifiers), so they can serve as a differential-testing corpus for an engine.
+
+- `rosters/extension-tests.roster.json`: the "Extension Tests Catalogue" list (units A, E, F, G1 to G4, with `APPLY` selected, so every gated modifier in T01 to T19 is active; total 1200 pts, 2 Enh).
+- `rosters/dup-constraints.roster.json`: the `Dup Z6` list from test D2 (two copies of E1, one with APPLY1, and E2).
