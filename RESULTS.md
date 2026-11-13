@@ -446,3 +446,25 @@ Units carry a Melee Weapons profile whose `Keywords` read `<unit>-own`, plus a c
 - A panel for a second leader on B3 lists the bodyguard's existing attachments by label (`Leader: P1`, `Support: S1`), but does not stop the attachment.
 
 Not tested: `ids`, `of` and `labelMember`; association scopes other than `force`; a leader attached to two units; `affects` with an id filter and `group`; `affects` targets `forces`, `rules` and `associations`; attaching in a roster with several forces.
+
+## Child forces (M8 Child Forces; Parent Force with Child Force A (which has Grandchild Force) and Child Force B)
+
+The list is created in game mode "Parent Force" (the catalogue's own `forceEntries`); child forces are added from the "Forces" section of the force's panel, and each one offers the force entries nested in its own entry. In the roster file a force's children are in a `forces` array on it (`rosters/m8-child-forces.roster.json`). A parent force's cost includes its children's (Parent 40 pts = own 10 + A 20 + B 10; A 20 includes Grandchild 10).
+
+Units (one per case; "force" is the constraint's scope, "incl" is `includeChildForces`):
+
+| Observation | Evidence |
+|---|---|
+| A unit count in scope `force` counts the units in that force only; with `includeChildForces` also the units in every child force below, any depth (not the parent, not a sibling) | CA fires only with the filler in the same force; CB (incl) fires with the filler in a child, grandchild or the other child of Parent; CB in Child A fires for Grandchild, not for Parent or for Child B |
+| An unset `includeChildForces` behaves as false | CF |
+| Scope `roster` counts all forces | CC (4/1) with units in four forces |
+| `field: forces` counts the direct child forces; with `includeChildForces` every force below; never the force itself | Parent: max 1 fires, max 2 does not (2 children); with incl: max 2 fires, max 3 does not (A, B, Grandchild). Child A: max 1 passes either way. Leaves: nothing |
+| `childId` filters forces by force entry id | HA/HB (Child Force A): fire in Parent only; HC (Grandchild, incl): fires in Parent and Child A, not in the leaves |
+| `instanceOf` scope `force` is the nearest force: MB (instanceOf Child Force A) true in Child A only, MC (instanceOf Parent Force) in Parent only | MB, MC |
+| `instanceOf` scope `ancestor`: any force on the way up | MD (Child Force A) true in Child A and Grandchild |
+| `atLeast 1 forces` of Child Force A with child forces: true in Parent only | MA |
+| `atLeast 1` F: scope force sees its own force only (ME never fired with F elsewhere); scope roster sees all (MF); scope force with incl sees the forces below (MG: Parent with F in A, G or B; A with F in G; nowhere else) | ME, MF, MG |
+
+Not tested: force and category constraints, adding child forces automatically, `affects` with the `forces` target, cost fields with `includeChildForces`, percent values across forces.
+
+The first runs of this sweep were wrong because the harness toggled the selected force when it was clicked a second time, so units went to a different force; the results here are from the corrected runs, placing each unit and reading the placements back.

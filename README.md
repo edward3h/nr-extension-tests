@@ -331,3 +331,8 @@ Each query is a scope (19 of them, including ids and an unknown one), a `childId
 ## Instantiation tests (M6 Instantiate catalogue)
 
 `M6 Instantiate.json` has six root units with minimums at different scopes (R1 to R7, R4 hidden) and six units with children whose minimums NR adds on its own (C1 nested, C2 and C3 groups, C4 child scopes and values, C5 links, C6 group member). Results are in `RESULTS.md`.
+
+## Child forces tests (M8 Child Forces catalogue)
+
+`M8 Child Forces.json` defines a Parent force with two child forces, one of which has a grandchild, in the catalogue's own `forceEntries`, and units that count units and forces at several scopes. Create a list in game mode "Parent Force", add Child Force A and B under it and a Grandchild under A (select Child A, expand its Forces section), then add each unit to one force and read its validation messages and keywords. Results are in RESULTS.md; `rosters/m8-child-forces.roster.json` is the export with the four forces and a unit in each.
+
