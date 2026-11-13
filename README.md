@@ -283,7 +283,7 @@ me".
 
 ## Duplicate ids (tests D1 to D2)
 
-Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mostly copy-pasted constraints and entry links), and 651 more repeat inside one file. These tests check how NR resolves a repeated id. Files: `Dup Library X.json`, `Dup Library Y.json` (library catalogues) and `Dup Z1.json` to `Dup Z6.json` (selectable catalogues). Each Z catalogue links to the shared entry and shows which copy it got in the Txt of its profile.
+Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mostly copy-pasted constraints and entry links), and 651 more repeat inside one file. These tests check how NR resolves a repeated id. Files: `Dup Library X.json`, `Dup Library Y.json` (library catalogues) and `Dup Library W.json`, and `Dup Z1.json` to `Dup Z7.json` (selectable catalogues). Each Z catalogue links to the shared entry and shows which copy it got in the Txt of its profile.
 
 | ID | Setup | Question | Observed |
 |---|---|---|---|
@@ -293,4 +293,5 @@ Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mos
 | D1d | Z4: links X only | control: from-X expected | |
 | D1e | Z4: link to S2, defined in X and in the game system | game system or catalogue copy | |
 | D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | |
+| D1g | Z7: links library W, which links X; link to S | are catalogue links followed transitively | |
 | D2 | Z6: two units each with an `Opt` that has a `max 1` constraint (with a message) with the same id; E1's Opt has a modifier `set` on that id to 5 once APPLY1 is selected. Set both Opts to quantity 2 | does the modifier change only E1's constraint (MSG-E1 goes, MSG-E2 stays) or every constraint with that id | |

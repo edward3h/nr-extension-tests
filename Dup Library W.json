@@ -1,0 +1,23 @@
+{
+  "catalogue": {
+    "name": "Dup Library W",
+    "id": "15d4-3bc4-99a2-5bda",
+    "authorName": "extension-tests",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "11a0-a9a3-bb5c-de4b",
+    "gameSystemRevision": 1,
+    "library": true,
+    "revision": 1,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "catalogueLinks": [
+      {
+        "name": "Dup Library X",
+        "id": "af53-6f5f-310e-52c2",
+        "importRootEntries": true,
+        "targetId": "b8d0-0a1b-6521-b9b2",
+        "type": "catalogue"
+      }
+    ]
+  }
+}
