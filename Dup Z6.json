@@ -1,0 +1,123 @@
+{
+  "catalogue": {
+    "name": "Dup Z6",
+    "id": "8fe2-c0d4-9a6e-34eb",
+    "authorName": "extension-tests",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "11a0-a9a3-bb5c-de4b",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "sharedSelectionEntries": [
+      {
+        "name": "D2 unit E1",
+        "id": "01a4-413c-7bd0-8b5e",
+        "hidden": false,
+        "type": "unit",
+        "selectionEntries": [
+          {
+            "name": "Opt E1",
+            "id": "dc46-8ea1-6b6c-9369",
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "fa61-f020-ad52-286d",
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1,
+                "message": "MSG-E1: Opt E1 needed"
+              }
+            ],
+            "modifiers": [
+              {
+                "type": "set",
+                "field": "fa61-f020-ad52-286d",
+                "value": 0,
+                "conditions": [
+                  {
+                    "childId": "349e-2c8c-9e55-4299",
+                    "field": "selections",
+                    "scope": "parent",
+                    "shared": true,
+                    "type": "atLeast",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "APPLY1: relax Opt E1",
+            "id": "349e-2c8c-9e55-4299",
+            "hidden": false,
+            "type": "upgrade"
+          }
+        ]
+      },
+      {
+        "name": "D2 unit E2",
+        "id": "5924-feb0-36da-12bc",
+        "hidden": false,
+        "type": "unit",
+        "selectionEntries": [
+          {
+            "name": "Opt E2",
+            "id": "d2c7-a3c8-f167-a900",
+            "hidden": false,
+            "type": "upgrade",
+            "constraints": [
+              {
+                "id": "fa61-f020-ad52-286d",
+                "field": "selections",
+                "scope": "parent",
+                "shared": true,
+                "type": "min",
+                "value": 1,
+                "message": "MSG-E2: Opt E2 needed"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "entryLinks": [
+      {
+        "name": "D2 unit E1",
+        "id": "b524-452b-af85-2fd5",
+        "hidden": false,
+        "import": true,
+        "targetId": "01a4-413c-7bd0-8b5e",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "b8ae-90af-bb96-7bad",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "D2 unit E2",
+        "id": "bdf8-1e3b-6991-b64e",
+        "hidden": false,
+        "import": true,
+        "targetId": "5924-feb0-36da-12bc",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "3128-25c8-fcc3-0319",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      }
+    ]
+  }
+}

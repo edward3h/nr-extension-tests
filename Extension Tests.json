@@ -73,6 +73,50 @@
           }
         ]
       }
+    ],
+    "sharedSelectionEntries": [
+      {
+        "name": "Shared thing 2",
+        "id": "87c4-d4d4-e3f3-b04a",
+        "hidden": false,
+        "type": "unit",
+        "profiles": [
+          {
+            "name": "P-Shared thing 2",
+            "id": "d95a-48b5-3a94-fa84",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e",
+                "$text": "from-GS"
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 }

@@ -1,0 +1,32 @@
+{
+  "catalogue": {
+    "name": "Dup Z5",
+    "id": "8637-80d1-3a36-5d71",
+    "authorName": "extension-tests",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "11a0-a9a3-bb5c-de4b",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "entryLinks": [
+      {
+        "name": "Z5 link to S (no catalogue links)",
+        "id": "18f5-d854-dffa-637e",
+        "hidden": false,
+        "import": true,
+        "targetId": "721a-92ad-3100-44fa",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "5d84-194e-0f5d-47e4",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      }
+    ]
+  }
+}

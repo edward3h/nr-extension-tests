@@ -280,3 +280,17 @@ me".
 - **G2** costs 100 pts, +10 pts when 2 or more copies exist (no `before`). Add three copies.
 - **G3** costs 100 pts, +5 pts when fewer than 2 copies exist (`lessThan`). Add two copies.
 - **E (leader)** can attach to **F (bodyguard)** through an `associations` entry (label "Leader", scope force, only F allowed). **G4** is a unit E must not be able to attach to. E carries a modifier that appends `FROM-E` to the weapons of its attached group. E and F each have an enhancement upgrade costing 1 `Enh`; a constraint with `traverseAssociationGroup` limits the group to 1 `Enh`. Add E, F and G4, find how NR attaches a leader, attach E to F, and compare weapon keywords and validation messages with E detached.
+
+## Duplicate ids (tests D1 to D2)
+
+Real data repeats ids: in `wh40k-11e`, 144 ids appear in more than one file (mostly copy-pasted constraints and entry links), and 651 more repeat inside one file. These tests check how NR resolves a repeated id. Files: `Dup Library X.json`, `Dup Library Y.json` (library catalogues) and `Dup Z1.json` to `Dup Z6.json` (selectable catalogues). Each Z catalogue links to the shared entry and shows which copy it got in the Txt of its profile.
+
+| ID | Setup | Question | Observed |
+|---|---|---|---|
+| D1a | Z1: links X then Y; both define S ("from-X", "from-Y") | which copy does the link show | |
+| D1b | Z2: links Y then X | does link order matter | |
+| D1c | Z3: defines its own S ("from-Z3") and links X, Y | does the catalogue's own copy win | |
+| D1d | Z4: links X only | control: from-X expected | |
+| D1e | Z4: link to S2, defined in X and in the game system | game system or catalogue copy | |
+| D1f | Z5: no catalogue links, link to S | does an id resolve when the defining catalogue is not linked | |
+| D2 | Z6: two units each with an `Opt` that has a `min 1` constraint with the same id; E1's Opt has a modifier `set` on that id to 0 once APPLY1 is selected | does the modifier change only E1's constraint (message MSG-E1 goes, MSG-E2 stays) or every constraint with that id | |

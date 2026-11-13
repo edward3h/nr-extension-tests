@@ -1,0 +1,48 @@
+{
+  "catalogue": {
+    "name": "Dup Z2",
+    "id": "059d-1922-482e-d3b2",
+    "authorName": "extension-tests",
+    "battleScribeVersion": 2.03,
+    "gameSystemId": "11a0-a9a3-bb5c-de4b",
+    "gameSystemRevision": 1,
+    "library": false,
+    "revision": 1,
+    "type": "catalogue",
+    "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
+    "catalogueLinks": [
+      {
+        "name": "Dup Library Y",
+        "id": "0ab6-52aa-d276-7d44",
+        "importRootEntries": true,
+        "targetId": "897b-810c-3cda-9c0a",
+        "type": "catalogue"
+      },
+      {
+        "name": "Dup Library X",
+        "id": "c1e8-f664-0288-27de",
+        "importRootEntries": true,
+        "targetId": "b8d0-0a1b-6521-b9b2",
+        "type": "catalogue"
+      }
+    ],
+    "entryLinks": [
+      {
+        "name": "Z2 link to S (links Y, X)",
+        "id": "5da1-39af-83bc-2d50",
+        "hidden": false,
+        "import": true,
+        "targetId": "721a-92ad-3100-44fa",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "316d-88dd-08ab-dfc4",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      }
+    ]
+  }
+}
