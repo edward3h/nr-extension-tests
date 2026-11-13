@@ -108,6 +108,22 @@
         ]
       },
       {
+        "name": "BM modifier bodyguard",
+        "id": "5ada-308c-b4f0-ffef",
+        "hidden": false,
+        "import": true,
+        "targetId": "ecb5-ff44-c264-9d91",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "7d7b-3a5d-0afb-e702",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
         "name": "LA self.group.profiles.Melee Weapons",
         "id": "9253-fff5-5c74-e41a",
         "hidden": false,
@@ -534,6 +550,150 @@
           {
             "name": "Units",
             "id": "ec91-11c2-0a22-22fd",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "LBM leader of BM",
+        "id": "c370-978e-833b-1d76",
+        "hidden": false,
+        "import": true,
+        "targetId": "327d-f8ed-9655-f842",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "8009-14ee-6116-26aa",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "T9 max3 force traverse",
+        "id": "95bd-cb59-4635-15b4",
+        "hidden": false,
+        "import": true,
+        "targetId": "a1d0-417e-c748-c36b",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "b4fa-7b9b-ae64-787d",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X1 min1 any self",
+        "id": "40c0-429e-3d61-d3f9",
+        "hidden": false,
+        "import": true,
+        "targetId": "cb29-c835-f903-5a2c",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "1f9f-a74b-92d9-dab3",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X2 min1 Leader self",
+        "id": "e937-1da2-45ff-2a4f",
+        "hidden": false,
+        "import": true,
+        "targetId": "c42c-2dd4-cf43-6e8e",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "9be7-8d87-2cd3-af69",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X3 min1 Leading x3 self",
+        "id": "9a06-09cc-9424-a047",
+        "hidden": false,
+        "import": true,
+        "targetId": "0c7b-6c1b-54b2-2d05",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "7754-5d9b-bebf-4ddf",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X4 min1 unit self",
+        "id": "c41d-55f5-f3d5-8b42",
+        "hidden": false,
+        "import": true,
+        "targetId": "52ce-ebbd-8a84-1b41",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "b086-138b-465d-809b",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X5 max0 any self",
+        "id": "366e-4b97-9dff-66c4",
+        "hidden": false,
+        "import": true,
+        "targetId": "f3e9-f71b-22f2-a65c",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "243c-5c25-df1b-a726",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X6 min1 any root-entry",
+        "id": "a3de-1137-c21f-3220",
+        "hidden": false,
+        "import": true,
+        "targetId": "b90a-c8c7-a7c6-1d6c",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "6f0e-e113-6e4d-7ef9",
+            "primary": true,
+            "targetId": "8e51-8031-ab34-a492"
+          }
+        ]
+      },
+      {
+        "name": "X7 min1 Support self",
+        "id": "57b2-74f8-571e-616d",
+        "hidden": false,
+        "import": true,
+        "targetId": "73e8-337b-a429-a24c",
+        "type": "selectionEntry",
+        "categoryLinks": [
+          {
+            "name": "Units",
+            "id": "d279-b051-df26-419e",
             "primary": true,
             "targetId": "8e51-8031-ab34-a492"
           }
@@ -1286,6 +1446,139 @@
             "id": "e933-b4fa-eabc-7220",
             "name": "b6",
             "message": "b6"
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "a2d2-6932-5906-9eaf",
+            "type": "append",
+            "value": "FROM-b6",
+            "join": ", ",
+            "affects": "self.group.profiles.Melee Weapons",
+            "scope": "self"
+          }
+        ]
+      },
+      {
+        "name": "BM modifier bodyguard",
+        "id": "ecb5-ff44-c264-9d91",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "bm-ownw",
+            "id": "2f01-40f5-c4bc-c910",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "bm-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "BM modifier bodyguard child",
+            "id": "b136-a272-b980-1b7d",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "bm-childw",
+                "id": "042e-48ae-0967-a9e6",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "bm-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "BM modifier bodyguard perk",
+            "id": "e564-ed7b-5054-c524",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "a2d2-6932-5906-9eaf",
+            "type": "append",
+            "value": "FROM-bm",
+            "join": ", ",
+            "affects": "self.group.profiles.Melee Weapons",
+            "scope": "self"
           }
         ]
       },
@@ -5104,6 +5397,16 @@
               }
             ]
           }
+        ],
+        "modifiers": [
+          {
+            "field": "a2d2-6932-5906-9eaf",
+            "type": "append",
+            "value": "FROM-m5",
+            "join": ", ",
+            "affects": "self.group.profiles.Melee Weapons",
+            "scope": "self"
+          }
         ]
       },
       {
@@ -5243,6 +5546,1399 @@
                 ]
               }
             ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "a2d2-6932-5906-9eaf",
+            "type": "append",
+            "value": "FROM-m6",
+            "join": ", ",
+            "affects": "self.group.profiles.Melee Weapons",
+            "scope": "self"
+          }
+        ]
+      },
+      {
+        "name": "LBM leader of BM",
+        "id": "327d-f8ed-9655-f842",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "lbm-ownw",
+            "id": "6f24-c4ae-567a-3089",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "lbm-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "LBM leader of BM child",
+            "id": "4c8a-ffc3-ea00-f0fe",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "lbm-childw",
+                "id": "77b5-b899-5bad-b61b",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "lbm-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "LBM leader of BM perk",
+            "id": "8cb9-d061-7756-7a8f",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading lbm",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "ecb5-ff44-c264-9d91",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "modifiers": [
+          {
+            "field": "a2d2-6932-5906-9eaf",
+            "type": "append",
+            "value": "FROM-lbm",
+            "join": ", ",
+            "affects": "self.group.profiles.Melee Weapons",
+            "scope": "self"
+          }
+        ]
+      },
+      {
+        "name": "T9 max3 force traverse",
+        "id": "a1d0-417e-c748-c36b",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "t9-ownw",
+            "id": "3aaf-d0dd-d63b-dbc0",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "t9-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "T9 max3 force traverse child",
+            "id": "b2cf-d9bb-e375-956b",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "t9-childw",
+                "id": "13ab-3810-e6c1-2d13",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "t9-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "T9 max3 force traverse perk",
+            "id": "6b23-e55d-b3a9-e26e",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading t9",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "b6ac-7556-fdb7-76db",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 3,
+            "field": "selections",
+            "scope": "force",
+            "childId": "upgrade",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "aa90-692b-31b9-408c",
+            "name": "t9",
+            "message": "t9",
+            "traverseAssociationGroup": true
+          }
+        ]
+      },
+      {
+        "name": "X1 min1 any self",
+        "id": "cb29-c835-f903-5a2c",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x1-ownw",
+            "id": "2bcf-d24d-1fb0-9f3f",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x1-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X1 min1 any self child",
+            "id": "d9bb-fc8c-6c36-7a9e",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x1-childw",
+                "id": "5481-7631-3c06-34c8",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x1-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X1 min1 any self perk",
+            "id": "d6fc-ffe3-2ed0-39b7",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x1",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "childId": "any",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "d768-f5cb-1990-3e10",
+            "name": "x1",
+            "message": "x1"
+          }
+        ]
+      },
+      {
+        "name": "X2 min1 Leader self",
+        "id": "c42c-2dd4-cf43-6e8e",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x2-ownw",
+            "id": "ed45-ad35-8eab-70aa",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x2-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X2 min1 Leader self child",
+            "id": "d5cd-f959-bcce-13b1",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x2-childw",
+                "id": "7c7c-bd74-95cf-475e",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x2-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X2 min1 Leader self perk",
+            "id": "f6af-b8a1-eea6-ee9f",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x2",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "childId": "Leader",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "7e51-65f2-1513-87e6",
+            "name": "x2",
+            "message": "x2"
+          }
+        ]
+      },
+      {
+        "name": "X3 min1 Leading x3 self",
+        "id": "0c7b-6c1b-54b2-2d05",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x3-ownw",
+            "id": "759b-a48e-f9af-cac9",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x3-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X3 min1 Leading x3 self child",
+            "id": "3522-efc9-13dd-866a",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x3-childw",
+                "id": "28e4-da66-05e6-cee9",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x3-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X3 min1 Leading x3 self perk",
+            "id": "1380-dce4-3217-86b7",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x3",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "childId": "Leading x3",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "09e6-ac47-013f-d0e8",
+            "name": "x3",
+            "message": "x3"
+          }
+        ]
+      },
+      {
+        "name": "X4 min1 unit self",
+        "id": "52ce-ebbd-8a84-1b41",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x4-ownw",
+            "id": "64bc-3440-e1fa-c5fc",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x4-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X4 min1 unit self child",
+            "id": "f404-eab8-afb6-069d",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x4-childw",
+                "id": "ef5f-f0fb-de21-b897",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x4-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X4 min1 unit self perk",
+            "id": "5c3b-ac16-abcd-e634",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x4",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "childId": "unit",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "7016-912e-49a7-a8fd",
+            "name": "x4",
+            "message": "x4"
+          }
+        ]
+      },
+      {
+        "name": "X5 max0 any self",
+        "id": "f3e9-f71b-22f2-a65c",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x5-ownw",
+            "id": "f011-4c18-a093-ce72",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x5-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X5 max0 any self child",
+            "id": "9164-a6d1-80f5-8c1d",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x5-childw",
+                "id": "a7a9-f4eb-4bda-2629",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x5-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X5 max0 any self perk",
+            "id": "c736-a56d-5128-9248",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x5",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "max",
+            "value": 0,
+            "field": "associations",
+            "scope": "self",
+            "childId": "any",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "1e1a-458c-6777-71b6",
+            "name": "x5",
+            "message": "x5"
+          }
+        ]
+      },
+      {
+        "name": "X6 min1 any root-entry",
+        "id": "b90a-c8c7-a7c6-1d6c",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x6-ownw",
+            "id": "a9e7-a71b-4b8d-e88d",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x6-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X6 min1 any root-entry child",
+            "id": "9a77-b65c-5cde-c91f",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x6-childw",
+                "id": "0c3d-376e-12b0-0371",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x6-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X6 min1 any root-entry perk",
+            "id": "6b2d-47c3-95e3-d99d",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x6",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "root-entry",
+            "childId": "any",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "28cc-5ff8-ebe6-922a",
+            "name": "x6",
+            "message": "x6"
+          }
+        ]
+      },
+      {
+        "name": "X7 min1 Support self",
+        "id": "73e8-337b-a429-a24c",
+        "hidden": false,
+        "type": "unit",
+        "costs": [
+          {
+            "name": "pts",
+            "typeId": "a2d8-5d18-80b9-4be2",
+            "value": 10
+          }
+        ],
+        "profiles": [
+          {
+            "name": "x7-ownw",
+            "id": "af9c-7066-fe99-848d",
+            "hidden": false,
+            "typeId": "8d4c-372e-8ac3-def2",
+            "typeName": "Melee Weapons",
+            "characteristics": [
+              {
+                "name": "A",
+                "typeId": "4c71-02b5-b294-444d"
+              },
+              {
+                "name": "S",
+                "typeId": "b7c2-bb77-0d0c-4052"
+              },
+              {
+                "name": "WS",
+                "typeId": "b755-0ea0-6554-6646"
+              },
+              {
+                "name": "Keywords",
+                "typeId": "a2d2-6932-5906-9eaf",
+                "$text": "x7-own"
+              },
+              {
+                "name": "Num",
+                "typeId": "e4ba-e365-6ee4-10a4"
+              },
+              {
+                "name": "Txt",
+                "typeId": "7e9c-6ea9-9082-981e"
+              }
+            ]
+          }
+        ],
+        "selectionEntries": [
+          {
+            "name": "X7 min1 Support self child",
+            "id": "51a9-96da-ccf0-3ebb",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ],
+            "profiles": [
+              {
+                "name": "x7-childw",
+                "id": "ba04-1a5d-1387-6366",
+                "hidden": false,
+                "typeId": "8d4c-372e-8ac3-def2",
+                "typeName": "Melee Weapons",
+                "characteristics": [
+                  {
+                    "name": "A",
+                    "typeId": "4c71-02b5-b294-444d"
+                  },
+                  {
+                    "name": "S",
+                    "typeId": "b7c2-bb77-0d0c-4052"
+                  },
+                  {
+                    "name": "WS",
+                    "typeId": "b755-0ea0-6554-6646"
+                  },
+                  {
+                    "name": "Keywords",
+                    "typeId": "a2d2-6932-5906-9eaf",
+                    "$text": "x7-child"
+                  },
+                  {
+                    "name": "Num",
+                    "typeId": "e4ba-e365-6ee4-10a4"
+                  },
+                  {
+                    "name": "Txt",
+                    "typeId": "7e9c-6ea9-9082-981e"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "X7 min1 Support self perk",
+            "id": "6669-acd8-cb61-9e76",
+            "hidden": false,
+            "type": "upgrade",
+            "costs": [
+              {
+                "name": "pts",
+                "typeId": "a2d8-5d18-80b9-4be2",
+                "value": 1
+              }
+            ]
+          }
+        ],
+        "associations": [
+          {
+            "name": "Leading x7",
+            "action": "group",
+            "childId": "unit",
+            "includeChildSelections": true,
+            "label": "Leader",
+            "min": 0,
+            "max": 1,
+            "scope": "force",
+            "conditionGroups": [
+              {
+                "type": "or",
+                "conditions": [
+                  {
+                    "childId": "c89b-5e14-cffa-ff16",
+                    "field": "selections",
+                    "scope": "self",
+                    "shared": true,
+                    "type": "instanceOf",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "constraints": [
+          {
+            "type": "min",
+            "value": 1,
+            "field": "associations",
+            "scope": "self",
+            "childId": "Support",
+            "shared": true,
+            "includeChildSelections": true,
+            "id": "be29-d93f-4d87-0532",
+            "name": "x7",
+            "message": "x7"
           }
         ]
       },
