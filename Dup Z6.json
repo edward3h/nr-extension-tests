@@ -28,16 +28,16 @@
                 "field": "selections",
                 "scope": "parent",
                 "shared": true,
-                "type": "min",
+                "type": "max",
                 "value": 1,
-                "message": "MSG-E1: Opt E1 needed"
+                "message": "MSG-E1: too many Opt E1"
               }
             ],
             "modifiers": [
               {
                 "type": "set",
                 "field": "fa61-f020-ad52-286d",
-                "value": 0,
+                "value": 5,
                 "conditions": [
                   {
                     "childId": "349e-2c8c-9e55-4299",
@@ -76,9 +76,9 @@
                 "field": "selections",
                 "scope": "parent",
                 "shared": true,
-                "type": "min",
+                "type": "max",
                 "value": 1,
-                "message": "MSG-E2: Opt E2 needed"
+                "message": "MSG-E2: too many Opt E2"
               }
             ]
           }
